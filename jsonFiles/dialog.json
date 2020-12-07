@@ -9,10 +9,13 @@
   "dialog1.5": "{MainCharacter}: /'I am {}, now tell me your name./' *concerned* ",
   "Space StationOxygen": [
     "As you enter Oxygen controll, The feeling of cold crisp air enters your lungs",
-    "Pure oxygen enters your lungs you cant breath however you start to stabilise"
+    "Pure oxygen enters your lungs you cant breath however you start to stabilise",
+    "Fresh air? in space. oh wait im in oxygen controll."
   ],
   "Space StationReactor": [
-
+    "That looks dangerous maybe i should stay away from the reactor",
+    "Pulsating power starts to emerge from the reactor",
+    ""
   ],
   "Space StationCafeteria": [
 
@@ -36,7 +39,7 @@
 
   ],
   "Space StationClarity": [
-	  "As you enter the mysteriously named Clarity Room, you hear a voice boom over the intercom: 'Artificial inteligence activated.\nEnjoying yourselves, intruders? \nIt's worth knowing the Cataclysmic Damage you will be responsible for today. \nDo not fool yourselves. This Facility is not simply the fruitless work of some pathetic scientist. \nThis house was built by the Genius Clovis Bray I himself. Within lies humanity's salvation. La fontaine de jouvence. \nMade possible by Clarity control. \nMagnificant, wasn't it? An entity beyond our own dimension.\nAnd the answer to Humanity's eternal struggle. Mortality.\nWere it to fall into the wrong hands, Humanity' "
+	  "As you enter the mysteriously named Clarity Room, you hear a voice boom over the intercom: 'Artificial inteligence activated.\nEnjoying yourselves, intruders? \nIt's worth knowing the Cataclysmic Damage you will be responsible for today. \nDo not fool yourselves. This Facility is not simply the fruitless work of some pathetic scientist. \nThis house was built by the Genius Clovis Bray I himself. Within lies humanity's salvation. La fontaine de jouvence. \nMade possible by Clarity control. \nMagnificant, wasn't it? An entity beyond our own dimension.\nAnd the answer to Humanity's eternal struggle. Mortality.\nWere it to fall into the wrong hands, humanity, and the universe, would be utterly doomed.\nI have no reason to believe you are anything other than the wrong hands.\nYou now face Godlike Judgement. May it extend eternally.'\nThe Intercom shut off and an Alarm was booming across the station. You should probably find a way to stop whatever is happening."
 
   ],
   "CastleDungeons": [
