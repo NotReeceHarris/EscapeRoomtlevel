@@ -8,7 +8,8 @@
   "dialog1.4": "Unknown character: /'Who are you?/' *Portrayed with interest.*",
   "dialog1.5": "{MainCharacter}: /'I am {}, now tell me your name./' *concerned* ",
   "Space StationOxygen": [
-
+    "As you enter Oxygen controll, The feeling of cold crisp air enters your lungs",
+    "Pure oxygen enters your lungs you cant breath however you start to stabilise"
   ],
   "Space StationReactor": [
 
@@ -35,7 +36,7 @@
 
   ],
   "Space StationClarity": [
-	  "As you enter the mysteriously named Clarity Room, you hear a voice boom over the intercom: 'Artificial inteligence activated.\nEnjoying yourselves intruders? \nIt's worth knowing the Cataclysmic Damage you'll be responsible for today. \nThis Facility was built ' "
+	  "As you enter the mysteriously named Clarity Room, you hear a voice boom over the intercom: 'Artificial inteligence activated.\nEnjoying yourselves, intruders? \nIt's worth knowing the Cataclysmic Damage you will be responsible for today. \nDo not fool yourselves. This Facility is not simply the fruitless work of some pathetic scientist. \nThis house was built by the Genius Clovis Bray I himself. Within lies humanity's salvation. La fontaine de jouvence. \nMade possible by Clarity control. \nMagnificant, wasn't it? An entity beyond our own dimension.\nAnd the answer to Humanity's eternal struggle. Mortality.\nWere it to fall into the wrong hands, Humanity' "
 
   ],
   "CastleDungeons": [
