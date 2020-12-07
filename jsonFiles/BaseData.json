@@ -1,0 +1,79 @@
+{
+  "Themes": "Mystery",
+  "Scene": [
+    "Space Station",
+    "Abandoned Hospital",
+    "Prison",
+    "Castle"
+  ],
+  "antagonistNames": [
+    "Lilith",
+    "Zozo",
+    "Lucifer",
+    "Succubus",
+    "Aamon",
+    "Baphomet",
+    "Ronove",
+    "Ose",
+    "Bill",
+    "Jeremy",
+    "Elon Musk",
+    "Collette",
+    "Zuckerberg",
+	  "DIO",
+    "Nino",
+    "Python"
+  ],
+  "sideCharacterNames": [
+    "X Æ A-Xii",
+    "Rick",
+    "Roll",
+    "Piers",
+    "Bill",
+    "Ben",
+    "Eloy",
+    "Isaac",
+    "Lennon",
+    "Molly",
+    "Talia",
+    "Kenny"
+  ],
+  "mainCharacterNames": [
+    "Kyle",
+    "Reece",
+    "Deven",
+    "Elijah"
+  ],
+  "Space StationSpecialItem": [
+    "Alien Sample",
+    "Hive Tyrant Molt",
+    "E.V.A",
+    "Dark Saber",
+    "S.A.B.R.E Engine",
+	  "Dark Matter"
+  ],
+  "Abandoned HospitalSpecialItem": [
+    "Cursed Bone Saw",
+    "Impulse Bone",
+    "Bath Water",
+    "Blood Vile",
+    "Corupt Membrane",
+	  "Covid Cure"
+  ],
+  "PrisonSpecialItem": [
+    "Golden Skull",
+    "Dark Matter",
+    "Diamond Snake",
+    "Warden's Key",
+    "Golden Spork",
+	  "Hell's Redeemer"
+  ],
+  "CastleSpecialItem": [
+    "White Walker Hair",
+    "The DragonStone",
+    "Excalibur",
+    "Night's Edge",
+    "Suspicious Looking Eye",
+	  "Cursed Skull"
+  ]
+}

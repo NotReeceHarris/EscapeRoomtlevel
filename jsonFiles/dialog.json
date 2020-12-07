@@ -1,0 +1,158 @@
+{
+  "debug": "-------Debugging Panel-------\n\nMain Character       : {}\nSide Character       : {}\nAntagonist Character : {}\n\nScene: {}\n\nRoom1: {}\nRoom2: {}\nRoom3: {}\nRoom4: {}\nRoom5: {}\n\nInventory Space : {}\nSpecial Item    : {}\nSpecial Room    : {}\n\n-----------------------------\n",
+  "start": "-----------------------------------------\nWelcome to Kyle's, Deven's, Elijah's\nand Reece's Escape Room project:\n\nWithin the interative escape room there\nare 1,966,080 possible combernations of\nrooms, names, scenes and items so you\nwill never have the same experience once! \n-----------------------------------------",
+  "dialog1.0": "You wake up, you look around and see {}- standing above you is a cloaked figure.",
+  "dialog1.1": "Hurriedly you scuttle away.",
+  "dialog1.2": "On the way you bump into someone.",
+  "dialog1.3": "{} : /'Who are you?/' You exclaim.",
+  "dialog1.4": "Unknown character: /'Who are you?/' *Portrayed with interest.*",
+  "dialog1.5": "{MainCharacter}: /'I am {}, now tell me your name./' *concerned* ",
+  "Space StationOxygen": [
+
+  ],
+  "Space StationReactor": [
+
+  ],
+  "Space StationCafeteria": [
+
+  ],
+  "Space StationWeapons": [
+
+  ],
+  "Space StationBridge": [
+
+  ],
+  "Space StationNavigation": [
+
+  ],
+  "Space StationHangar": [
+
+  ],
+  "Space StationCommunication": [
+
+  ],
+  "Space StationEngineering": [
+
+  ],
+  "Space StationClarity": [
+	  "As you enter the mysteriously named Clarity Room, you hear a voice boom over the intercom: 'Artificial inteligence activated.\nEnjoying yourselves' "
+
+  ],
+  "CastleDungeons": [
+
+  ],
+  "CastleCourtyard": [
+
+  ],
+  "CastleKitchen": [
+    
+  ],
+  "CastleBakeHouse": [
+
+  ],
+  "CastleKeep": [
+    
+  ],
+  "CastleStables": [
+
+  ],
+  "CastleChapel": [
+
+  ],
+  "CastleBarracks": [
+
+  ],
+  "CastleWatch Tower": [
+
+  ],
+  "CastleGreat Hall": [
+
+  ],
+  "Abandoned HospitalICU": [
+
+  ],
+  "Abandoned HospitalA&E": [
+
+  ],
+  "Abandoned HospitalTwelth ward": [
+
+  ],
+  "Abandoned HospitalReception": [
+
+  ],
+  "Abandoned HospitalBasement": [
+
+  ],
+  "Abandoned HospitalChildrens ward": [
+
+  ],
+  "Abandoned HospitalSurgery": [
+    
+  ],
+  "Abandoned HospitalXray": [
+    
+  ],
+  "Abandoned HospitalTreatment Room": [
+    
+  ],
+  "Abandoned HospitalLab": [
+    
+  ],
+  "Abandoned HospitalIntensive care unit": [
+    
+  ],
+  "PrisonCell 192": [
+    
+  ],
+  "PrisonCell 143": [
+    
+  ],
+  "PrisonDeliveries": [
+
+  ],
+  "PrisonWorkshop": [
+    
+  ],
+  "PrisonCell 931": [
+    
+  ],
+  "PrisonCell 134": [
+    
+  ],
+  "PrisonKitchen": [
+
+  ],
+  "PrisonStorage": [
+
+  ],
+  "PrisonCell 640": [
+    
+  ],
+  "PrisonCell 920": [
+    
+  ],
+  "PrisonLaundry": [
+    
+  ],
+  "PrisonKennel": [
+    
+  ],
+  "PrisonOffice": [
+    
+  ],
+  "PrisonInfirmary": [
+    
+  ],
+  "PrisonChapel": [
+    
+  ],
+  "PrisonExecution Chamber": [
+    
+  ],
+  "PrisonSolitary": [
+
+  ],
+  "PrisonPadded Solitary": [
+    
+  ]
+}

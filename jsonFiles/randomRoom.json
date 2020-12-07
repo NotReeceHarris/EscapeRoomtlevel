@@ -1,0 +1,91 @@
+{
+  "Space Station1": [
+	  "Oxygen",
+	  "Reactor"
+  ],
+  "Space Station2": [
+	  "Cafeteria",
+	  "Weapons"
+  ],
+  "Space Station3": [
+    "Bridge",
+    "Navigation"
+  ],
+  "Space Station4": [
+    "Hangar",
+	  "Communication"
+  ],
+  "Space Station5": [
+	  "Engineering",
+	  "Clarity"
+  ],
+  "Castle1": [
+    "Dungeons",
+    "Courtyard"
+  ],
+  "Castle2": [
+    "Kitchen",
+    "BakeHouse"
+  ],
+  "Castle3": [
+    "Keep",
+    "Stables"
+  ],
+  "Castle4": [
+    "Chapel",
+    "Barracks"
+  ],
+  "Castle5": [
+    "Watch Tower",
+    "Great Hall"
+  ],
+  "Abandoned Hospital1": [
+    "ICU",
+    "A&E"
+  ],
+  "Abandoned Hospital2": [
+    "Twelth ward",
+    "Reception"
+  ],
+  "Abandoned Hospital3": [
+    "Basement",
+    "Childrens ward"
+  ],
+  "Abandoned Hospital4": [
+    "Surgery",
+    "Xray"
+  ],
+  "Abandoned Hospital5": [
+    "Treatment Room",
+    "Lab",
+    "Intensive care unit"
+  ],
+  "Prison1": [
+    "Cell 192",
+    "Cell 143",
+    "Deliveries",
+    "Workshop"
+  ],
+  "Prison2": [
+    "Cell 931",
+    "Cell 134",
+    "Kitchen",
+    "Storage"
+  ],
+  "Prison3": [
+    "Cell 640",
+    "Cell 920",
+    "Laundry",
+    "Kennel"
+  ],
+  "Prison4": [
+    "Office",
+    "Infirmary",
+    "Chapel"
+  ],
+  "Prison5": [
+    "Execution Chamber",
+    "Solitary",
+    "Padded Solitary"
+  ]
+}
