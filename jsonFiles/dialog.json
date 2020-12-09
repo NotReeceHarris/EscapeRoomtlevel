@@ -1,12 +1,35 @@
 {
   "debug": "-------Debugging Panel-------\n\nMain Character       : {}\nSide Character       : {}\nAntagonist Character : {}\n\nScene: {}\n\nRoom1: {}\nRoom2: {}\nRoom3: {}\nRoom4: {}\nRoom5: {}\n\nInventory Space : {}\nSpecial Item    : {}\nSpecial Room    : {}\n\n-----------------------------\n",
   "start": "-----------------------------------------\nWelcome to Kyle's, Deven's, Elijah's\nand Reece's Escape Room project:\n\nWithin the interative escape room there\nare 1,966,080 possible combernations of\nrooms, names, scenes and items so you\nwill never have the same experience once! \n-----------------------------------------",
-  "dialog1.0": "You wake up, you look around and see {}- standing above you is a cloaked figure.",
-  "dialog1.1": "Hurriedly you scuttle away.",
-  "dialog1.2": "On the way you bump into someone.",
-  "dialog1.3": "{} : /'Who are you?/' You exclaim.",
-  "dialog1.4": "Unknown character: /'Who are you?/' *Portrayed with interest.*",
-  "dialog1.5": "{MainCharacter}: /'I am {}, now tell me your name./' *concerned* ",
+  "dialog1.0": "\n-----------------------------------------\n\nYou wake up, you look around. Standing above you is a cloaked figure.\n-----------------------------------------",
+  "dialog1.1": "\nHurriedly you scuttle away.\n-----------------------------------------",
+  "dialog1.2": "\nOn the way you bump into someone.\n-----------------------------------------",
+  "dialog1.3": "\n{} : 'Who are you?' You exclaim.\n-----------------------------------------",
+  "dialog1.4": "\nUnknown character: 'Who are you?!' *Portrayed with interest.*\n-----------------------------------------",
+  "dialog1.5": "\n{}: 'I am {}, now tell me your name.' *concerned*\n-----------------------------------------",
+  "dialog1.6": "\nUnknown character: 'well since you asked im {} now why are you here!'\n-----------------------------------------",
+  "dialog1.7": "\n{}: 'I dont know where here is.' *looking around*\n-----------------------------------------",
+  "dialog1.8": "\n{}: 'Well your in a {}, how did you get here?' *Curious*\n-----------------------------------------",
+  "dialog1.9": "\n{}: 'A {}?!? How did i get here?' *Curious*\n-----------------------------------------",
+
+
+
+  "CastleOuter": [
+    "",
+    ""
+  ],
+  "Abandoned HospitalOuter": [
+    "",
+    ""
+  ],
+  "PrisonOuter": [
+    "",
+    ""
+  ],
+  "Space StationOuter": [
+    "",
+    ""
+  ],
   "Space StationOxygen": [
     "As you enter Oxygen controll, The feeling of cold crisp air enters your lungs",
     "Pure oxygen enters your lungs you cant breath however you start to stabilise",

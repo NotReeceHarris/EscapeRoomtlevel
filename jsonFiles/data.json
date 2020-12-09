@@ -1,6 +1,6 @@
 {
   "inventorySpace": 5,
-  "Debug": true,
+  "Debug": false,
   "puzzles": [
     "codeLock",
     "sudoku",

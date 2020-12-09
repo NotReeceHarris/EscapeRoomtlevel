@@ -33,6 +33,7 @@ roomName5 = random.choice(roomjson[f'{scene}5'])
 specialRoom = random.choice([roomName1, roomName2, roomName3, roomName4, roomName5])
 inventorySpace = data["inventorySpace"]
 specialItem = random.choice(baseData[f"{scene}SpecialItem"])
+commandLine = '\nRoom: {}  |  Commands: Help, Inventory\n >#> '
 
 # --------------------------------------- Start Function
 
@@ -43,7 +44,27 @@ def startGame():
   input('\nPress Enter to start...')
   global Start
   Start = time.time()
-  print('\n')
+  print(dialog["dialog1.0"].format(antagonistCharacter))
+  input()
+  print(dialog["dialog1.1"])
+  input()
+  print(dialog["dialog1.2"])
+  input()
+  print(dialog["dialog1.3"].format(mainCharacter))
+  input()
+  print(dialog["dialog1.4"])
+  input()
+  print(dialog["dialog1.5"].format(mainCharacter, mainCharacter))
+  input()
+  print(dialog["dialog1.6"].format(sideCharacter))
+  input()
+  print(dialog["dialog1.7"].format(mainCharacter))
+  input()
+  print(dialog["dialog1.8"].format(sideCharacter, scene))
+  input()
+  print(dialog["dialog1.9"].format(mainCharacter, scene))
+  input()
+  userInput = input(str(commandLine.format('Outer Rooms')))
   
 
 
@@ -54,7 +75,7 @@ def Corridor():
 
 #---RoomA
 def roomA():
-  print('')
+  print(random.choice(dialog[f"{scene}{roomName1}"]))
 
 
 
