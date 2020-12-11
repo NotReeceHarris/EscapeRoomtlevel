@@ -64,6 +64,18 @@ def startGame():
   input()
   print(dialog["dialog1.9"].format(mainCharacter, scene))
   input()
+  print(dialog["dialog1.10"].format(sideCharacter))
+  input()
+  print(dialog["dialog1.11"].format(mainCharacter))
+  input()
+  print(dialog["dialog1.12"].format(sideCharacter))
+  input()
+  print(dialog["dialog1.13"].format(mainCharacter))
+  input()
+  print(dialog["dialog1.14"])
+  input()
+  print(dialog["dialog1.15"].format(sideCharacter))
+  input()
   userInput = input(str(commandLine.format('Outer Rooms')))
   
 
