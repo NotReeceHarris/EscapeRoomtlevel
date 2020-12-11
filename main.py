@@ -89,8 +89,21 @@ def Corridor():
 def roomA():
   print(random.choice(dialog[f"{scene}{roomName1}"]))
 
+#---RoomB
+def roomB():
+  print(random.choice(dialog[f"{scene}{roomName2}"]))
 
+#---RoomC
+def roomC():
+  print(random.choice(dialog[f"{scene}{roomName3}"]))
 
+#---RoomD
+def RoomD():
+  print(random.choice(dialog[f"{scene}{roomName4}"]))
+
+#---RoomE
+def RoomE():
+  print(random.choice(dialog[f"{scene}{roomName5}"]))
 
 
 #--------------------------------------- Start of Script
