@@ -34,6 +34,7 @@ roomName2 = random.choice(roomjson[f'{scene}2'])
 roomName3 = random.choice(roomjson[f'{scene}3'])
 roomName4 = random.choice(roomjson[f'{scene}4'])
 roomName5 = random.choice(roomjson[f'{scene}5'])
+escapeDoorLocation = random.choice(["room1", "room2", "room3", "room4", "room4"])
 specialRoom = random.choice([roomName1, roomName2, roomName3, roomName4, roomName5])
 inventorySpace = data["inventorySpace"]
 specialItem = random.choice(baseData[f"{scene}SpecialItem"])
@@ -43,6 +44,8 @@ difficulty = 0
 # --------------------------------------- Start Function
 
 def startGame():
+  if data["Debug"]:
+    print(dialog["debug"].format(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, inventorySpace, specialItem, specialRoom, escapeDoorLocation))
   while True:
     global difficulty
     difficultyinput = input("-----------------------------------------\nSelect a difficulty(1, 2, 3)\n-----------------------------------------\n >#>")
@@ -58,8 +61,6 @@ def startGame():
     else:
       print("Please Input a valid difficulty!")
 
-  if data["Debug"]:
-    print(dialog["debug"].format(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, inventorySpace, specialItem, specialRoom))
   print(dialog["start"].format(difficulty))
   input('\nPress Enter to start...')
   global Start
@@ -110,25 +111,28 @@ def corridor():
       print(f"room1        ->  {roomName1}\nroom2        ->  {roomName2}\nroom3        ->  {roomName3}\nroom4        ->  {roomName4}\nroom5        ->  {roomName5}\nhelp         ->  Help Menu\ninventory    -> Show inventory")
       print(dialog["spacer"])
     elif userInput.lower() == "room1":
-      roomA()
+      if "room1key" in inventory["items"]:
+        roomA()
+      else:
+        print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
     elif userInput.lower() == "room2":
       if "room2key" in inventory["items"]:
-        roomA()
+        roomB()
       else:
         print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
     elif userInput.lower() == "room3":
       if "room3key" in inventory["items"]:
-        roomB()
+        roomC()
       else:
         print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
     elif userInput.lower() == "room4":
       if "room4key" in inventory["items"]:
-        roomC()
+        roomD()
       else:
         print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
     elif userInput.lower() == "room5":
       if "room5key" in inventory["items"]:
-        roomC()
+        roomE()
       else:
         print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
     else:
@@ -143,25 +147,25 @@ def Corridor():
 
 #---RoomA
 def roomA():
-  Room1.Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty) #all the data that the room will need is parsed in
+  Room1.Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty, escapeDoorLocation) #all the data that the room will need is parsed in
 
 #---RoomB
 def roomB():
-  Room2.Room2Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty) #all the data that the room will need is parsed in
+  Room2.Room2Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty, escapeDoorLocation) #all the data that the room will need is parsed in
 
 #---RoomC
 def roomC():
-  Room3.Room3Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty) #all the data that the room will need is parsed in
+  Room3.Room3Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty, escapeDoorLocation) #all the data that the room will need is parsed in
 
 #---RoomD
-def RoomD():
+def roomD():
   print(random.choice(dialog[f"{scene}{roomName4}"]))
-  Room4.Room4Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty) #all the data that the room will need is parsed in
+  Room4.Room4Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty, escapeDoorLocation) #all the data that the room will need is parsed in
 
 #---RoomE
-def RoomE():
+def roomE():
   print(random.choice(dialog[f"{scene}{roomName5}"]))
-  Room5.Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty) #all the data that the room will need is parsed in
+  Room5.Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty, escapeDoorLocation) #all the data that the room will need is parsed in
 
 
 #--------------------------------------- Start of Script

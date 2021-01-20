@@ -1,7 +1,7 @@
 {
   "spacer": "\n-----------------------------------------\n",
   "commandError": "\n-----------------------------------------\nSorry that isnt a valid command try 'help' to get a list of commands\n-----------------------------------------\n",
-  "debug": "-------Debugging Panel-------\n\nMain Character       : {}\nSide Character       : {}\nAntagonist Character : {}\n\nScene: {}\n\nRoom1: {}\nRoom2: {}\nRoom3: {}\nRoom4: {}\nRoom5: {}\n\nInventory Space : {}\nSpecial Item    : {}\nSpecial Room    : {}\n\n-----------------------------\n",
+  "debug": "-------Debugging Panel-------\n\nMain Character       : {}\nSide Character       : {}\nAntagonist Character : {}\n\nScene: {}\n\nRoom1: {}\nRoom2: {}\nRoom3: {}\nRoom4: {}\nRoom5: {}\n\nInventory Space : {}\nSpecial Item    : {}\nSpecial Room    : {}\nEscapeRoom      : {}\n\n-----------------------------\n",
   "start": "-----------------------------------------\nWelcome to Kyle's, Deven's, Elijah's\nand Reece's Escape Room project:\n\nWithin the interative escape room there\nare 1,966,080 possible combinations of\nrooms, names, scenes and items so you\nwill never have the same experience once!\n\nYou are going to have a different\nexperience as you selected difficulty {}\nthis mean That the AI, puzzles and timers\nwill be changed due to the difficulty\nyou have chosen\n-----------------------------------------",
   "dialog1.0": "\n-----------------------------------------\n\nYou wake up, you look around. Standing above you is a cloaked figure.\n-----------------------------------------",
   "dialog1.1": "\nHurriedly you scuttle away.\n-----------------------------------------",
@@ -24,12 +24,12 @@
   "dialog1.18": "\n\n-----------------------------------------",
 
   "CastleOuter": [
-    "filler",
-    ""
+    "As you exit the room you notice how silent and cold the castle corridors are",
+    "As soon as you leave the room into the empty corridor, you wonder if anyone else is stuck here"
   ],
   "Abandoned HospitalOuter": [
-    "filler",
-    ""
+    "As you walk out into the corridor you nearly trip over a rusty gurney as you search around the room with a quick burst of paranoia you calm down when you realise no one is watching",
+    "The eerie atmosphere in the corridor is spine chilling, terrified you go back out into t"
   ],
   "PrisonOuter": [
     "filler",

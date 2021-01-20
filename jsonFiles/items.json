@@ -27,7 +27,7 @@
     "Nuclear core",
     "Wires",
     "USB port",
-    "Space suit"
+    "Space Suit"
   ],
   "Room1AbandonedHospitalItems": [
     "Empty syringe",
@@ -38,11 +38,11 @@
   "Room2AbandonedHospitalItems": [
     "External Hard drive",
     "Desk computer",
-    "filler",
-    "filler"
+    "ID Card",
+    "Screwdriver"
   ],
   "Room3AbandonedHospitalItems": [
-    "fillerfiller",
+    "",
     "filler",
     "filler",
     "fillerfiller"

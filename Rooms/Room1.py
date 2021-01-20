@@ -26,11 +26,10 @@ AbandonedHospitalPuzzle = [""]
 PrisonPuzzle = [""]
 CastlePuzzle = [""]
 
-def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty):
-
+def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty, escapeDoorLocation):
   lol = random.choice(dialog[f"{scene}{roomName1}"])
   print(lol)
-  currentItems = ""
+  currentItems = []
   if scene == "Space Station":
     currentItems = itemJson["Room1SpaceStationItems"]
   elif scene == "Abandoned Hospital":
@@ -51,20 +50,26 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         intd = 0
         for x in currentItems:
             intd += 1
-            print(f'item{intd}     -> Inspect {x}')
-        print("    --------------------------")
+            print(f'item{intd}       -> Inspect {x}')
+        print("storageunit -> Inspect storage unit\n\n    --------------------------")
+        if escapeDoorLocation == "room1":
+          print("LockedDoor  -> Door")
         print(
-            "help      -> Help Menu\ninventory -> Opens your inventory\nexit      -> Return to corridor"
+            "help         -> Help Menu\ninventory    -> Opens your inventory\nexit         -> Return to corridor"
         )
         print("\n-----------------------------------------\n")
     elif UserInput.lower() == "item1":
-        pass
+      #currentItems[0]
+      print(random.choice(["You touch the {}, a hair standing fell fills your body"]).filler(currentItems[0]))
     elif UserInput.lower() == "item2":
-        pass
+      #currentItems[1]
+      print()
     elif UserInput.lower() == "item3":
-        pass
+      #currentItems[2]
+      print()
     elif UserInput.lower() == "item4":
-        pass
+      #currentItems[3]
+      print()
     elif UserInput.lower() == "inventory":
         print("\n-----------------------------------------\n")
         for x in inventory["items"]:
