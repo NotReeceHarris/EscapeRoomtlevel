@@ -4,7 +4,7 @@
 	  "Reactor"
   ],
   "Space Station2": [
-	  "Cafeteria",
+	  "Communication",
 	  "Weapons"
   ],
   "Space Station3": [
@@ -13,7 +13,7 @@
   ],
   "Space Station4": [
     "Hangar",
-	  "Communication"
+    "Cafeteria"
   ],
   "Space Station5": [
 	  "Engineering",

@@ -1,0 +1,122 @@
+{
+  "Room1SpaceStationItems": [
+    "Blaster",
+    "Terminal",
+    "Cracked Open Vent",
+    "Space suit"
+  ],
+  "Room2SpaceStationItems": [
+    "Morse code book",
+    "Insulating sheet",
+    "Power cable",
+    "Large battery"
+  ],
+  "Room3SpaceStationItems": [
+    "Oxygen",
+    "Blaster",
+    "wrench",
+    "knife"
+  ],
+  "Room4SpaceStationItems": [
+    "Space vial",
+    "Jetpack",
+    "Dehydrated food",
+    "Space"
+  ],
+  "Room5SpaceStationItems": [
+    "Nuclear core",
+    "Wires",
+    "USB port",
+    "Space suit"
+  ],
+  "Room1AbandonedHospitalItems": [
+    "Empty syringe",
+    "Defribulator",
+    "Bandage",
+    "Scissors"
+  ],
+  "Room2AbandonedHospitalItems": [
+    "External Hard drive",
+    "Desk computer",
+    "filler",
+    "filler"
+  ],
+  "Room3AbandonedHospitalItems": [
+    "fillerfiller",
+    "filler",
+    "filler",
+    "fillerfiller"
+  ],
+  "Room4AbandonedHospitalItems": [
+    "fillerfiller",
+    "fillerfiller",
+    "fillerfiller",
+    "fillerfiller"
+  ],
+  "Room5AbandonedHospitalItems": [
+    "fillerfiller",
+    "fillerfiller",
+    "fillerfiller",
+    "fillerfiller"
+  ],
+  "Room1PrisonItems": [
+    "handcuffs",
+    "baton",
+    "saw",
+    "crowbar"
+  ],
+  "Room2PrisonItems": [
+    "knife",
+    "pan",
+    "keys",
+    "gas storage"
+  ],
+  "Room3PrisonItems": [
+    "Detergent",
+    "soft cloth",
+    "basket",
+    "filler"
+  ],
+  "Room4PrisonItems": [
+    "goblet",
+    "matches",
+    "soft cloth",
+    "bible"
+  ],
+  "Room5PrisonItems": [
+    "filler",
+    "straight jacket",
+    "sharpened straight jacket locks",
+    "exposed spring"
+  ],
+  "Room1CastleItems": [ 
+    "Pike",
+    "filler",
+    "filler",
+    "filler"
+  ],
+  "Room2CastleItems": [ 
+    "Knife",
+    "filler",
+    "filler",
+    "filler"
+  ],
+  "Room3CastleItems": [
+    "filler",
+    "filler",
+    "filler",
+    "filler"
+  ],
+  "Room4CastleItems": [
+    "filler",
+    "filler",
+    "filler",
+    "filler"
+  ],
+  "Room5CastleItems": [
+    "filler",
+    "filler",
+    "filler",
+    "filler"
+  ]
+}

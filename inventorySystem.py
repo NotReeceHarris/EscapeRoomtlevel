@@ -47,4 +47,4 @@ def DropI(Item):
             print(f'{Item}, Item has been dropped')
         else:
             print('-------------------------------------')
-            print(f'You try to drop this item but fail (ERROR)')
+            print(f'You try to drop this item but fail (ERROR)') 

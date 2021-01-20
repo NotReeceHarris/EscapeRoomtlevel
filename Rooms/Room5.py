@@ -15,12 +15,13 @@ with open(jsonFileBase, 'r') as c:
 with open(jsonFileData, 'r') as d:
     data = json.load(d)
 
+# commands : 
 
 def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty):
+  print(random.choice(dialog[f"{scene}{roomName5}"]))
   while True:
 
     if specialRoom == roomName5:
         specialRoom = True
-    print(random.choice(dialog[f"{scene}{roomName5}"]))
 
     #Code Here

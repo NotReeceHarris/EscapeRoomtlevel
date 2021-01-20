@@ -1,5 +1,6 @@
 {
   "spacer": "\n-----------------------------------------\n",
+  "commandError": "\n-----------------------------------------\nSorry that isnt a valid command try 'help' to get a list of commands\n-----------------------------------------\n",
   "debug": "-------Debugging Panel-------\n\nMain Character       : {}\nSide Character       : {}\nAntagonist Character : {}\n\nScene: {}\n\nRoom1: {}\nRoom2: {}\nRoom3: {}\nRoom4: {}\nRoom5: {}\n\nInventory Space : {}\nSpecial Item    : {}\nSpecial Room    : {}\n\n-----------------------------\n",
   "start": "-----------------------------------------\nWelcome to Kyle's, Deven's, Elijah's\nand Reece's Escape Room project:\n\nWithin the interative escape room there\nare 1,966,080 possible combinations of\nrooms, names, scenes and items so you\nwill never have the same experience once!\n\nYou are going to have a different\nexperience as you selected difficulty {}\nthis mean That the AI, puzzles and timers\nwill be changed due to the difficulty\nyou have chosen\n-----------------------------------------",
   "dialog1.0": "\n-----------------------------------------\n\nYou wake up, you look around. Standing above you is a cloaked figure.\n-----------------------------------------",
@@ -236,7 +237,7 @@
 
   ],
   "PrisonPadded Solitary": [
-    "filler"
+    "As you enter the abandoned chamber of a mentally ill patient, a chill shivers down your spine. It's as if you can sense the wails and confusion radiating off of the mattress walls. White. Plain and simple. Is all you see. You feel like if you stay here too long you too, will go insane. You see an empty straight jacket tied to one of the walls, a bed that looks as hard as concrete and blood curdling stench that makes you want to leave as soon as possible."
     
   ]
 }
