@@ -1,5 +1,7 @@
 import random
 import json
+import time
+import sys  
 
 jsonFileData = "jsonFiles/data.json"
 jsonFileDialog = "jsonFiles/dialog.json"
@@ -31,11 +33,10 @@ SpaceStationPuzzle = [""]
 AbandonedHospitalPuzzle = [""]
 PrisonPuzzle = [""]
 CastlePuzzle = [""]
-cabnetcode = random.randint(1000, 9999)
 
 def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty, escapeDoorLocation):
   #
-  print("\n" + random.choice(dialog[f"{scene}{roomName1}"]))
+  print("\n" + random.choice(dialog[f"{scene}{roomName1}"])) 
   currentItems = []
   if scene == "Space Station":
     currentItems = itemsJson["Room1SpaceStationItems"]
@@ -55,6 +56,8 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
     else:
       with open(jsonInventory, 'r') as e:
         inventoryreset = json.load(e)
+      global cabnetcode
+      cabnetcode = inventoryreset["code"]["room1cabnet"]
       inventoryreset["locations"]["keylocation"] = x
       inventoryreset["locations"]["otherlocation"] = y
       with open(jsonInventory, 'w') as f:
@@ -74,7 +77,7 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         for x in currentItems:
             intd += 1
             print(f'item{intd}       -> Inspect {x}')
-        print("storageunit -> Inspect storage unit\nbrokenglass -> inspect broken glass\n\n    --------------------------\n")
+        print("storageunit -> Inspect storage unit\n\n    --------------------------\n")
         if escapeDoorLocation == "room1":
           print("lockeddoor   -> Door")
         print(
@@ -100,7 +103,7 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         else:
           print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format(cabnetcode))
           inventoryitem1["items"].append(f"Paper ({cabnetcode})")
-          inventoryitem1["unlocks"].append("item4room1")
+          inventoryitem1["unlocks"].append("item1room1")
           inventoryitem1["unlocks"].append("room1paper")
       else:
         if "item1room1" in inventoryitem1["unlocks"]:
@@ -132,7 +135,7 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         else:
           print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format(cabnetcode))
           inventoryitem2["items"].append(f"Paper ({cabnetcode})")
-          inventoryitem2["unlocks"].append("item4room1")
+          inventoryitem2["unlocks"].append("item2room1")
           inventoryitem2["unlocks"].append("room1paper")
       else:
         if "item2room1" in inventoryitem2["unlocks"]:
@@ -164,7 +167,7 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         else:
           print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format(cabnetcode))
           inventoryitem3["items"].append(f"Paper ({cabnetcode})")
-          inventoryitem3["unlocks"].append("item4room1")
+          inventoryitem3["unlocks"].append("item3room1")
           inventoryitem3["unlocks"].append("room1paper")
       else:
         if "item3room1" in inventoryitem3["unlocks"]:
@@ -212,25 +215,33 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
 
       with open(jsonInventory, 'r') as e:
         inventoryitem5 = json.load(e)
-        
-      if "Key (Room1 LockBox)" in inventoryitem5["items"] or "boxopened" in inventoryitem5["unlocks"]:
-        if "boxopened" in inventoryitem5["unlocks"]:
-          print(random.choice("Right this lock box needs a code", "maybe i have the code", "Maybe the code is on a note."))
+
+      if "Key (Room1 LockBox)" in inventoryitem5["items"] or "boxopenedroom1" in inventoryitem5["unlocks"]:
+        if "boxopenedroom1" in inventoryitem5["unlocks"] and "room1paper" not in inventoryitem5["unlocks"]:
+          print(random.choice(["\nRight this lock box needs a code", "\nmaybe i have the code", "\nMaybe the code is on a note."]))
+        elif "boxopenedroom1" not in inventoryitem5["unlocks"] and "room1paper" not in inventoryitem5["unlocks"]:
+          print(random.choice(["\nA lockbox? huh is it open! I need a 4 digit code", "\nWhy is there only a little lockbox in this huge Storage unit, Theres a 4 digit lock on it!"]))
+          inventoryitem5["unlocks"].append("boxopenedroom1")
+        elif "boxopenedroom1" in inventoryitem5["unlocks"] and "room1paper" not in inventoryitem5["unlocks"]:
+          print(random.choice(["\nI have already opend this box, its just a waste of time", "\nHavent i already opend this box? if so it would be a waste of time to open again.", "\nI have already taken stuff from here it would be pointless to look at it again."]))
         else:
-          print(random.choice(["A lockbox? huh is it open!", "Why is there only a little lockbox in this huge Storage unit"]))
-          inventoryitem5["unlocks"].append("boxopened")
-        if "room1paper" in inventoryitem5["unlocks"]:
-          pass
+          if "room1paper" in inventoryitem5["unlocks"] and "Key (Room 2)" not in inventoryitem5["items"]:
+            print(random.choice(["\nYou use the code {}, it opens there is a key that says \"Room 2\" on it and a weird looking torch", "\nYou enter the code {}, it unlocks! theres a key that says \"Room 2\" on it and a wierd looking torch"]).format(cabnetcode))
+            inventoryitem5["items"].append("Black Light")
+            inventoryitem5["items"].append("Key (Room 2)")
+            inventoryitem5["unlocks"].append("room1lockbox")
+          elif "Key (Room 2)" in inventoryitem5["items"]:
+            print(random.choice(["\nI have already opend this box, its just a waste of time", "\nHavent i already opend this box? if so it would be a waste of time to open again.", "\nI have already taken stuff from here it would be pointless to look at it again."]))
+          else:
+            print(random.choice(["\nA lockbox? huh is it open! I need a 4 digit code", "\nWhy is there only a little lockbox in this huge Storage unit, Theres a 4 digit lock on it!"]))
+          
         
       else:
-        print(random.choice(["Theres a lock, maybe theres a key around here", "Its locked, maybe a key is around here", "A lock? whats hidden in here, maybe a key would tell me", "Well im not getting into this maybe i need a key"]))
+        print(random.choice(["\nTheres a lock, maybe theres a key around here", "\nIts locked, maybe a key is around here", "\nA lock? whats hidden in here, maybe a key would tell me", "\nWell im not getting into this maybe i need a key"]))
 
       with open(jsonInventory, 'w') as f:
         json.dump(inventoryitem5, f, indent=2)
 
-
-    elif UserInput.lower() == "brokenglass":
-      print()
     elif UserInput.lower() == "inventory":
       with open(jsonInventory, 'r') as e:
         inventoryshow = json.load(e)
@@ -242,7 +253,17 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         return
     elif UserInput.lower() == "lockeddoor":
       if escapeDoorLocation == "room1":
-        pass
+        with open(jsonInventory, 'r') as e:
+          inventoryshow = json.load(e)
+        if "Key (Exit)" in inventoryshow["items"]:
+          timestamp = int(time.time()) - inventoryshow["timestart"]
+          dt_object = f"{round(timestamp / 60, 2)} Minutes"
+          currenttime = time.ctime(time.time())
+          print(dialog["escapewin"].format(scene, sideCharacter, antagonistCharacter, currenttime, dt_object))
+          time.sleep(10)
+          sys.exit()
+        else:
+          print(random.choice(["\nIts locked!, maybe i could find a key somewhere", "\nIts locked, I need a key", "\nIts locked, maybe i can kick the door down\n*You try to kick the door down*\nIt wont budge, Maybe i have to find a key for it."]))
       else:
         print(dialog["commandError"])
     else:

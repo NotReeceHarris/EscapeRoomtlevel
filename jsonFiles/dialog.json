@@ -22,6 +22,7 @@
   "dialog1.16": "\nYou and {} sprint away while trying not to look back!\n-----------------------------------------",
   "dialog1.17": "\nYour cornered, {} starts to boot the door down!\n-----------------------------------------",
   "dialog1.18": "\n\n-----------------------------------------",
+  "escapewin": "You escape the {} that has imprisoned you.\n Your fellow companion {} died at the hands of {}.\n You look down at your watch and you realise it is\n{}, You was trying to escape for {}.",
 
   "CastleOuter": [
     "As you exit the room you notice how silent and cold the castle corridors are",
@@ -243,7 +244,7 @@
     "\nYou dont want to touch the {}, but you know it might be useful",
     "\nA {}? Unusual maybe this might hold a secret",
     "\nI didn't expect to see a {}, I dont think i could find a use to this.",
-    "\nWhat a find! {} Looks very important! however this doesnt look like something i could use.",
+    "\nWhat a find! {} However this doesnt look like something i could use.",
     "\nA {}, perhaps somebody misplaced this- it doesn't look very beneficial to our survival."
     
   ],
@@ -252,7 +253,7 @@
     "\n - Keys? wait this one is the only real one, it says {}",
 	  "\n - It wouldn't be an extremely creepy turn of events if there wasn't a key that says {} on it.",
 	  "\n - A key! I'm lucky it has a tag on it or I would be here all day looking for the lock.",
-    "\n - You got: Key {}! (This is very cliche, yes.)"
+    "\n - You got {}! (This is very cliche, yes.)"
   ],
   "alreadysearched": [
     "\n- I've already taken the stuff from here!",

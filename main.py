@@ -34,7 +34,7 @@ roomName2 = random.choice(roomjson[f'{scene}2'])
 roomName3 = random.choice(roomjson[f'{scene}3'])
 roomName4 = random.choice(roomjson[f'{scene}4'])
 roomName5 = random.choice(roomjson[f'{scene}5'])
-escapeDoorLocation = random.choice(["room1", "room2", "room3", "room4", "room4"])
+escapeDoorLocation = "room2" #random.choice(["room1", "room2", "room3", "room4", "room4"])
 specialRoom = random.choice([roomName1, roomName2, roomName3, roomName4, roomName5])
 inventorySpace = data["inventorySpace"]
 specialItem = random.choice(baseData[f"{scene}SpecialItem"])
@@ -55,6 +55,17 @@ def startGame():
     "locations": {
       "keylocation": "",
       "otherlocation": ""
+    },
+    "code":{
+      "room1cabnet": random.randint(1000, 9999),
+      "room2cabnet": random.randint(1000, 9999),
+      "room3cabnet": random.randint(10000, 99999),
+      "room4cabnet": random.randint(1000, 9999),
+      "room5cabnet": random.randint(1000, 9999)
+    },
+    "timestart": int(time.time()),
+    "otherdata": {
+      "room2": []
     }
     }
   
@@ -133,33 +144,45 @@ def startGame():
 def corridor():
 
   while True:
+    with open(jsonInventory, 'r') as e:
+      inventoryshow = json.load(e)
     userInput = input(str(commandLine.format('Outer Rooms')))
     if userInput.lower() == "help":
       print(dialog["spacer"])
-      print(f"room1        ->  {roomName1}\nroom2        ->  {roomName2}\nroom3        ->  {roomName3}\nroom4        ->  {roomName4}\nroom5        ->  {roomName5}\nhelp         ->  Help Menu\ninventory    -> Show inventory")
+      print(f"room1        ->  {roomName1}\nroom2        ->  {roomName2}\nroom3        ->  {roomName3}\nroom4        ->  {roomName4}\nroom5        ->  {roomName5}\n\n    --------------------------\n\nhelp         ->  Help Menu\ninventory    -> Show inventory")
       print(dialog["spacer"])
     elif userInput.lower() == "room1":
-      if "Key (Room 1)" in inventory["items"]:
+      if "Key (Room 1)" in inventoryshow["items"]:
         roomA()
       else:
         print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
     elif userInput.lower() == "room2":
-      if "room2key" in inventory["items"]:
+      if "Key (Room 2)" in inventoryshow["items"]:
         roomB()
       else:
         print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
     elif userInput.lower() == "room3":
-      if "room3key" in inventory["items"]:
-        roomC()
+      print(random.choice(["\nOh this doesnt need a key theres a keypad!", "\nfiller"]))
+      while True:
+        with open(jsonInventory, 'r') as e:
+          inventoryshow = json.load(e)
+        userinput01 = str(input("Enter passcode\n>#> "))
+        if not userInput.numerical():
+          print(random.choice(["This keypad only has numbers, not letters.", "Huh? I dont see a letter here", "Maybe its a number there are no numbers here"]))
+        elif userInput == inventoryshow["code"]["room3cabnet"]:
+          print("\nHuh it worked...","\nWow....I'm really good at guessing this, aren't I?","\nSo this is the power of completely guessing a keypad sequence?")
+          roomC()
+        else:
+          print(random.choice(["\nThe number entered was incorrect.", "\nAccess Denied.", "\nAunauthroized Access Code", "\nDamn it's the wrong code.", "\nSeriously?", "\nThis is a joke.", "\nGod damn it! We are almost out!", "\nHow many times will I get this wrong?", "\nCome on! Hurry it up!"]))
       else:
         print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
     elif userInput.lower() == "room4":
-      if "room4key" in inventory["items"]:
+      if "Key (Room 4)" in inventoryshow["items"]:
         roomD()
       else:
         print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
     elif userInput.lower() == "room5":
-      if "room5key" in inventory["items"]:
+      if "Key (Room 5)" in inventoryshow["items"]:
         roomE()
       else:
         print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
