@@ -8,15 +8,19 @@
     "otherlocation": ""
   },
   "code": {
-    "room1cabnet": 4121,
-    "room2cabnet": 8722,
-    "room3cabnet": "9 4 0 9 0",
-    "room4cabnet": "94090",
-    "room5cabnet": 2248
+    "room1cabnet": 5308,
+    "room2cabnet": 6726,
+    "room3cabnet": "8 8 2 8 3",
+    "room4cabnet": "88283",
+    "dif1num": "8 0 7 1 7",
+    "dif2num": "6 1 9 4 2 5 1 5",
+    "dif3num": "4 1 8 1 2 9 3 2 4 5 9 9 5"
   },
-  "timestart": 1611258937,
+  "timestart": 1611262436,
   "otherdata": {
-    "room2": []
+    "room2": [],
+    "table": [],
+    "difficulty": 0
   },
   "randomItems": []
 }

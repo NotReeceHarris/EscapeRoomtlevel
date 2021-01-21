@@ -101,8 +101,8 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         if "item1room5" in inventoryitem1["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format(cabnetcode))
-          inventoryitem1["items"].append(f"Paper ({cabnetcode})")
+          print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format("Decrypt table part 6"))
+          inventoryitem1["items"].append("Decrypt table part 6")
           inventoryitem1["unlocks"].append("item1room5")
           inventoryitem1["unlocks"].append("room5paper")
       else:
@@ -126,15 +126,15 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         if "item2room5" in inventoryitem2["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice(dialog["pickupkey"]).format("Key (Room5 LockBox)"))
-          inventoryitem2["items"].append("Key (Room5 LockBox)")
+          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 5"))
+          inventoryitem2["items"].append("Decrypt table part 5")
           inventoryitem2["unlocks"].append("item2room5")
       elif inventoryitem2["locations"]["otherlocation"] == "item2room5":
         if "item2room5" in inventoryitem2["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format(cabnetcode))
-          inventoryitem2["items"].append(f"Paper ({cabnetcode})")
+          print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format("Decrypt table part 6"))
+          inventoryitem2["items"].append("Decrypt table part 6")
           inventoryitem2["unlocks"].append("item2room5")
           inventoryitem2["unlocks"].append("room5paper")
       else:
@@ -158,15 +158,15 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         if "item3room5" in inventoryitem3["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice(dialog["pickupkey"]).format("Key (Room5 LockBox)"))
-          inventoryitem3["items"].append("Key (Room5 LockBox)")
+          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 5"))
+          inventoryitem3["items"].append("Decrypt table part 5")
           inventoryitem3["unlocks"].append("item3room5")
       elif inventoryitem3["locations"]["otherlocation"] == "item3room5":
         if "item3room5" in inventoryitem3["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format(cabnetcode))
-          inventoryitem3["items"].append(f"Paper ({cabnetcode})")
+          print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format("Decrypt table part 6"))
+          inventoryitem3["items"].append("Decrypt table part 6")
           inventoryitem3["unlocks"].append("item3room5")
           inventoryitem3["unlocks"].append("room5paper")
       else:
@@ -190,15 +190,15 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         if "item4room5" in inventoryitem4["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice(dialog["pickupkey"]).format("Key (Room5 LockBox)"))
-          inventoryitem4["items"].append("Key (Room5 LockBox)")
+          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 5"))
+          inventoryitem4["items"].append("Decrypt table part 5")
           inventoryitem4["unlocks"].append("item4room5")
       elif inventoryitem4["locations"]["otherlocation"] == "item4room5":
         if "item4room5" in inventoryitem4["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format(cabnetcode))
-          inventoryitem4["items"].append(f"Paper ({cabnetcode})")
+          print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format("Decrypt table part 6"))
+          inventoryitem4["items"].append("Decrypt table part 6")
           inventoryitem4["unlocks"].append("item4room5")
           inventoryitem4["unlocks"].append("room5paper")
       else:
@@ -211,34 +211,110 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
       with open(jsonInventory, 'w') as f:
         json.dump(inventoryitem4, f, indent=2)
 
-    elif UserInput.lower() == "storageunit":
+    elif UserInput.lower() == "vault":
 
       with open(jsonInventory, 'r') as e:
         inventoryitem5 = json.load(e)
 
-      if "Key (Room5 LockBox)" in inventoryitem5["items"] or "boxopenedroom5" in inventoryitem5["unlocks"]:
-        if "boxopenedroom5" in inventoryitem5["unlocks"] and "room5paper" not in inventoryitem5["unlocks"]:
-          print(random.choice(["\nRight this lock box needs a code", "\nmaybe i have the code", "\nMaybe the code is on a note."]))
-        elif "boxopenedroom5" not in inventoryitem5["unlocks"] and "room5paper" not in inventoryitem5["unlocks"]:
-          print(random.choice(["\nA lockbox? huh is it open! I need a 4 digit code", "\nWhy is there only a little lockbox in this huge Storage unit, Theres a 4 digit lock on it!"]))
-          inventoryitem5["unlocks"].append("boxopenedroom5")
-        elif "boxopenedroom5" in inventoryitem5["unlocks"] and "room5paper" not in inventoryitem5["unlocks"]:
-          print(random.choice(["\nI have already opend this box, its just a waste of time", "\nHavent i already opend this box? if so it would be a waste of time to open again.", "\nI have already taken stuff from here it would be pointless to look at it again."]))
-        else:
-          if "room5paper" in inventoryitem5["unlocks"] and "Key (Room 3)" not in inventoryitem5["items"]:
-            print(random.choice(["\nYou use the code {}, it opens there is a key that says \"Room 3\" on it and a weird looking torch", "\nYou enter the code {}, it unlocks! theres a key that says \"Room 3\" on it and a wierd looking torch"]).format(cabnetcode))
-            inventoryitem5["items"].append("Black Light")
-            inventoryitem5["items"].append("Key (Room 3)")
-            inventoryitem5["unlocks"].append("room5lockbox")
-          elif "Key (Room 3)" in inventoryitem5["items"]:
-            print(random.choice(["\nI have already opend this box, its just a waste of time", "\nHavent i already opend this box? if so it would be a waste of time to open again.", "\nI have already taken stuff from here it would be pointless to look at it again."]))
-          else:
-            print(random.choice(["\nA lockbox? huh is it open! I need a 4 digit code", "\nWhy is there only a little lockbox in this huge Storage unit, Theres a 4 digit lock on it!"]))
-          
+      decrypt = ""
+
+      if difficulty == 1:
+        for x in inventoryitem5["code"]["dif1num"].split(" "):
+          if x == 0:
+            decrypt = decrypt + str(7)
+          if x == 1:
+            decrypt = decrypt + str(2)
+          if x == 2:
+            decrypt = decrypt + str(6)
+          if x == 3:
+            decrypt = decrypt + str(0)
+          if x == 4:
+            decrypt = decrypt + str(3)
+          if x == 5:
+            decrypt = decrypt + str(4)
+          if x == 6:
+            decrypt = decrypt + str(1)
+          if x == 7:
+            decrypt = decrypt + str(8)
+          if x == 8:
+            decrypt = decrypt + str(9)
+          if x == 9:
+            decrypt = decrypt + str(5)
+      elif difficulty == 2:
+        for x in inventoryitem5["code"]["dif2num"].split(" "):
+          if x == 0:
+            decrypt = decrypt + str(7)
+          if x == 1:
+            decrypt = decrypt + str(2)
+          if x == 2:
+            decrypt = decrypt + str(6)
+          if x == 3:
+            decrypt = decrypt + str(0)
+          if x == 4:
+            decrypt = decrypt + str(3)
+          if x == 5:
+            decrypt = decrypt + str(4)
+          if x == 6:
+            decrypt = decrypt + str(1)
+          if x == 7:
+            decrypt = decrypt + str(8)
+          if x == 8:
+            decrypt = decrypt + str(9)
+          if x == 9:
+            decrypt = decrypt + str(5)
+      elif difficulty == 3:
+        for x in inventoryitem5["code"]["dif3num"].split(" "):
+          if x == 0:
+            decrypt = decrypt + str(7)
+          if x == 1:
+            decrypt = decrypt + str(2)
+          if x == 2:
+            decrypt = decrypt + str(6)
+          if x == 3:
+            decrypt = decrypt + str(0)
+          if x == 4:
+            decrypt = decrypt + str(3)
+          if x == 5:
+            decrypt = decrypt + str(4)
+          if x == 6:
+            decrypt = decrypt + str(1)
+          if x == 7:
+            decrypt = decrypt + str(8)
+          if x == 8:
+            decrypt = decrypt + str(9)
+          if x == 9:
+            decrypt = decrypt + str(5)
+      
+      if "vault" in inventoryitem5["unlocks"]:
+        print(random.choice(["So there is a number in the vault it says {}", "Right it says {} i wonder what it means", ""]).format(decrypt))
         
       else:
-        print(random.choice(["\nTheres a lock, maybe theres a key around here", "\nIts locked, maybe a key is around here", "\nA lock? whats hidden in here, maybe a key would tell me", "\nWell im not getting into this maybe i need a key"]))
+        print(random.choice(["\nThe vault looks like it has stuff etched into it it says {}, maybe this is the code huh simple\n", "Is that a number? wait no its etched into the vault huh it says.. {}"]).format(decrypt))
 
+
+
+
+
+
+      if "Decrypt table part 1" in inventoryitem5["items"]:
+        inventoryitem5["items"].remove("Decrypt table part 1")
+        inventoryitem5["otherdata"]["table"].append("Decrypt table part 1")
+        print(random.choice(["You put the peice on the table, Lets hope it matches the others", "You place the peice on the table, Lets hope it matches the others", "Il put this peice on the table maybe the others are in the next room"]))
+        
+
+
+
+
+
+
+
+
+
+
+
+      else:
+        print(random.choice(["Maybe i should go finish off the decryption table", "Huh maybe the decryption table will help me"]))
+      
       with open(jsonInventory, 'w') as f:
         json.dump(inventoryitem5, f, indent=2)
 

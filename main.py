@@ -34,12 +34,11 @@ roomName2 = random.choice(roomjson[f'{scene}2'])
 roomName3 = random.choice(roomjson[f'{scene}3'])
 roomName4 = random.choice(roomjson[f'{scene}4'])
 roomName5 = random.choice(roomjson[f'{scene}5'])
-escapeDoorLocation = "room2" #random.choice(["room1", "room2", "room3", "room4", "room4"])
+escapeDoorLocation = random.choice(["room1", "room2", "room3", "room4", "room4"])
 specialRoom = random.choice([roomName1, roomName2, roomName3, roomName4, roomName5])
 inventorySpace = data["inventorySpace"]
 specialItem = random.choice(baseData[f"{scene}SpecialItem"])
 commandLine = '\nRoom: {}  |  Commands: Help, Inventory\n >#> '
-difficulty = 0
 
 # --------------------------------------- Start Function
 
@@ -66,12 +65,15 @@ def startGame():
       "room2cabnet": random.randint(1000, 9999),
       "room3cabnet": f"{skullnum1} {skullnum2} {skullnum3} {skullnum4} {skullnum5}",
       "room4cabnet": f"{skullnum1}{skullnum2}{skullnum3}{skullnum4}{skullnum5}",
-      "room5cabnet": random.randint(1000, 9999)
+      "dif1num": f"{random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)}",
+      "dif2num": f"{random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)}",
+      "dif3num": f"{random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)} {random.randint(0, 9)}"
     },
     "timestart": int(time.time()),
     "otherdata": {
       "room2": [],
-      "table": []
+      "table": [],
+      "difficulty": 0
     }
     }
   
@@ -83,19 +85,22 @@ def startGame():
   if data["Debug"]:
     print(dialog["debug"].format(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, inventorySpace, specialItem, specialRoom, escapeDoorLocation))
   while True:
-    global difficulty
+    with open(jsonInventory, 'r') as a:
+      inventoryreset = json.load(a)
     difficultyinput = input("-----------------------------------------\nSelect a difficulty(1, 2, 3)\n-----------------------------------------\n >#>")
     if difficultyinput == "1":
-      difficulty += 1
+      inventoryreset["otherdata"]["difficulty"] = 1
       break
     elif difficultyinput == "2":
-      difficulty += 2
+      inventoryreset["otherdata"]["difficulty"] = 2
       break
     elif difficultyinput == "3":
-      difficulty += 3
+      inventoryreset["otherdata"]["difficulty"] = 3
       break
     else:
       print("Please Input a valid difficulty!")
+    with open(jsonInventory, 'w') as f:
+      json.dump(inventoryreset, f, indent=2)
   allcalc = cal()
   allposs = allcalc['allposs']
   allvars = allcalc['allvar']
@@ -105,7 +110,7 @@ def startGame():
   allvarsf = f"{allvars:,}"
   alllinesf = f"{alllines:,}"
 
-  print(dialog["start"].format(allpossf, allvarsf, alllinesf, difficulty, allperc, allpossf, allvarsf, alllinesf))
+  print(dialog["start"].format(allpossf, allvarsf, alllinesf, inventoryreset["otherdata"]["difficulty"], allperc, allpossf, allvarsf, alllinesf))
   input('\nPress Enter to start...')
   global Start
   Start = time.time()
@@ -148,7 +153,6 @@ def startGame():
   corridor()
 
 def corridor():
-
   while True:
     with open(jsonInventory, 'r') as e:
       inventoryshow = json.load(e)
@@ -188,7 +192,9 @@ def corridor():
         break
 
     elif userInput.lower() == "room5":
-      if "keyroom5" in inventoryitem4["unlocks"]:
+      with open(jsonInventory, 'r') as e:
+        inventoryshow = json.load(e)
+      if "keyroom5" in inventoryshow["unlocks"]:
         roomE()
       else:
         print("\nThere doesnt seem to be a lock, maybe its jammed i should go check the other rooms\n", "\nmaybe its stuck i should go check the other rooms and figure this out later\n", "\nhuh its stuck maybe i should go check the other rooms and come back later\n")
@@ -211,23 +217,38 @@ def Corridor():
 
 #---RoomA
 def roomA():
+  with open(jsonInventory, 'r') as a:
+    inventoryreset = json.load(a)
+  difficulty = inventoryreset["otherdata"]["difficulty"]
   Room1.Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty, escapeDoorLocation) #all the data that the room will need is parsed in
 
 #---RoomB
 def roomB():
+  with open(jsonInventory, 'r') as a:
+    inventoryreset = json.load(a)
+  difficulty = inventoryreset["otherdata"]["difficulty"]
   Room2.Room2Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty, escapeDoorLocation) #all the data that the room will need is parsed in
 
 #---RoomC
 def roomC():
+  with open(jsonInventory, 'r') as a:
+    inventoryreset = json.load(a)
+  difficulty = inventoryreset["otherdata"]["difficulty"]
   Room3.Room3Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty, escapeDoorLocation) #all the data that the room will need is parsed in
 
 #---RoomD
 def roomD():
+  with open(jsonInventory, 'r') as a:
+    inventoryreset = json.load(a)
+  difficulty = inventoryreset["otherdata"]["difficulty"]
   print(random.choice(dialog[f"{scene}{roomName4}"]))
   Room4.Room4Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty, escapeDoorLocation) #all the data that the room will need is parsed in
 
 #---RoomE
 def roomE():
+  with open(jsonInventory, 'r') as a:
+    inventoryreset = json.load(a)
+  difficulty = inventoryreset["otherdata"]["difficulty"]
   print(random.choice(dialog[f"{scene}{roomName5}"]))
   Room5.Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty, escapeDoorLocation) #all the data that the room will need is parsed in
 
