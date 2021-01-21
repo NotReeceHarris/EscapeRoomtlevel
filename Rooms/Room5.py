@@ -287,7 +287,6 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         if "vaultopen" in inventoryitem5["unlocks"]:
           print(random.choice(["\nNO! IM NOT DOING THIS AGAIN IM GOING\n", "\nTHERES NO TIME LETS GET OUT OF HERE\n", " \nI HAVE THE KEY LETS GET OUT\n"]))
         elif "vault" in inventoryitem5["unlocks"]:
-          print(random.choice(["\nSo there is a number in the vault it says {}\n", "\nRight it says {} i wonder what it means\n", "\nmaybe i need to decrypt {} to open the vault\n"]).format(decrypt))
           with open(jsonInventory, 'r') as e:
             inventoryvault = json.load(e)
           inventoryvault["unlocks"].append("vault")
@@ -311,6 +310,7 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
                   json.dump(inventoryvault, f, indent=2)
               else:
                 print(random.choice(["\nThe number entered was incorrect.", "\nAccess Denied.", "\nAunauthroized Access Code", "\nDamn it's the wrong code.", "\nSeriously?", "\nThis is a joke.", "\nGod damn it! We are almost out!", "\nHow many times will I get this wrong?", "\nCome on! Hurry it up!"]))
+              break
 
             elif difficulty == 2:
               userinput = input(f"Vault Lock |   Etched Number : {inventoryitem5['code']['dif2num']}\n>#>")
@@ -330,6 +330,7 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
                   json.dump(inventoryvault, f, indent=2)
               else:
                 print(random.choice(["\nThe number entered was incorrect.", "\nAccess Denied.", "\nAunauthroized Access Code", "\nDamn it's the wrong code.", "\nSeriously?", "\nThis is a joke.", "\nGod damn it! We are almost out!", "\nHow many times will I get this wrong?", "\nCome on! Hurry it up!"]))
+              break
 
             elif difficulty == 3:
               userinput = input(f"Vault Lock |   Etched Number : {inventoryitem5['code']['dif3num']}\n>#>")
@@ -347,6 +348,7 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
                   json.dump(inventoryvault, f, indent=2)
               else:
                 print(random.choice(["\nThe number entered was incorrect.", "\nAccess Denied.", "\nAunauthroized Access Code", "\nDamn it's the wrong code.", "\nSeriously?", "\nThis is a joke.", "\nGod damn it! We are almost out!", "\nHow many times will I get this wrong?", "\nCome on! Hurry it up!"]))
+              break
 
               if not userinput.isnumeric():
                 print(random.choice(["\nThis keypad only has numbers, not letters.", "\nHuh? I dont see a letter here", "\nMaybe its a number there are no numbers here"]))

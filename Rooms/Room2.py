@@ -247,7 +247,9 @@ def Room2Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
     elif UserInput.lower() == "exit":
         return
     elif UserInput.lower() == "craftkey":
-      if "Key Half 2 (Room 3)" in inventoryitem1["items"] and "Key Half 1 (Room 3)" in inventoryitem1["items"]:
+      with open(jsonInventory, 'r') as e:
+          inventorycraftkey = json.load(e)
+      if "Key Half 2 (Room 3)" in inventorycraftkey["items"] and "Key Half 1 (Room 3)" in inventorycraftkey["items"]:
         print("\nBoth the keys fit together, how nice", "\nmaybe this goes.. oh why was i worried they go together", "\nMaybe this goes with this")
         print("\n- You combined the keys and make a full key")
         with open(jsonInventory, 'r') as e:

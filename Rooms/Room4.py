@@ -272,6 +272,7 @@ def Room4Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         | H | B | E | D | R | F | M | U | L | Q |
         | 3 | 4 | 8 | 2 | 9 | 5 | 6 | 1 | 7 | 0 |
         """
+        print(dialog["clear"])
         print(table)
         input("Press enter to leave table...")
         print(dialog["clear"])
