@@ -94,7 +94,7 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         if "item1room5" in inventoryitem1["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 5"))
+          print(random.choice(dialog["decryptiongraph"]).format("Decrypt table part 5"))
           inventoryitem1["items"].append("Decrypt table part 5")
           inventoryitem1["unlocks"].append("item1room5")
       elif inventoryitem1["locations"]["otherlocation"] == "item1room5":
@@ -126,7 +126,7 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         if "item2room5" in inventoryitem2["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 5"))
+          print(random.choice(dialog["decryptiongraph"]).format("Decrypt table part 5"))
           inventoryitem2["items"].append("Decrypt table part 5")
           inventoryitem2["unlocks"].append("item2room5")
       elif inventoryitem2["locations"]["otherlocation"] == "item2room5":
@@ -158,7 +158,7 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         if "item3room5" in inventoryitem3["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 5"))
+          print(random.choice(dialog["decryptiongraph"]).format("Decrypt table part 5"))
           inventoryitem3["items"].append("Decrypt table part 5")
           inventoryitem3["unlocks"].append("item3room5")
       elif inventoryitem3["locations"]["otherlocation"] == "item3room5":
@@ -190,7 +190,7 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         if "item4room5" in inventoryitem4["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 5"))
+          print(random.choice(dialog["decryptiongraph"]).format("Decrypt table part 5"))
           inventoryitem4["items"].append("Decrypt table part 5")
           inventoryitem4["unlocks"].append("item4room5")
       elif inventoryitem4["locations"]["otherlocation"] == "item4room5":
@@ -284,34 +284,87 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
             decrypt = decrypt + str(9)
           if x == 9:
             decrypt = decrypt + str(5)
-      
-      if "vault" in inventoryitem5["unlocks"]:
-        print(random.choice(["So there is a number in the vault it says {}", "Right it says {} i wonder what it means", ""]).format(decrypt))
-        
-      else:
-        print(random.choice(["\nThe vault looks like it has stuff etched into it it says {}, maybe this is the code huh simple\n", "Is that a number? wait no its etched into the vault huh it says.. {}"]).format(decrypt))
-
-
-
-
-
+            
 
       if "Decrypt table part 1" in inventoryitem5["items"]:
         inventoryitem5["items"].remove("Decrypt table part 1")
         inventoryitem5["otherdata"]["table"].append("Decrypt table part 1")
         print(random.choice(["You put the peice on the table, Lets hope it matches the others", "You place the peice on the table, Lets hope it matches the others", "Il put this peice on the table maybe the others are in the next room"]))
-        
+        if "vaultopen" in inventoryitem5["unlocks"]:
+          print(random.choice(["\nNO! IM NOT DOING THIS AGAIN IM GOING\n", "\nTHERES NO TIME LETS GET OUT OF HERE\n", " \nI HAVE THE KEY LETS GET OUT\n"]))
+        elif "vault" in inventoryitem5["unlocks"]:
+          print(random.choice(["\nSo there is a number in the vault it says {}\n", "\nRight it says {} i wonder what it means\n", "\nmaybe i need to decrypt {} to open the vault\n"]).format(decrypt))
+          with open(jsonInventory, 'r') as e:
+            inventoryvault = json.load(e)
+          inventoryvault["unlocks"].append("vault")
+          with open(jsonInventory, 'w') as f:
+            json.dump(inventoryvault, f, indent=2)
+          while True:
+            if difficulty == 1:
+              userinput = input(f"Vault Lock |   Etched Number : {inventoryitem5['code']['dif1num']}")
+              if str(userinput) == str(decrypt):
+                print(f"Omg it worked it opend wait there is only 2 items why is there ONLY 2 items inside a huge vault, wait what is it a Key it says 'Exit' on it and a {specialItem} well lets go find {sideCharacter} and escape!")
+                with open(jsonInventory, 'r') as e:
+                  inventoryvault = json.load(e)
 
+                inventoryvault["unlocks"].append("vaultopen")
+                inventoryvault["items"].append("Key (Exit)")
+                inventoryvault["items"].append(f"{specialItem}")
+                inventoryvault["unlocks"].append("sidedeath")
 
+                with open(jsonInventory, 'w') as f:
+                  json.dump(inventoryvault, f, indent=2)
+              else:
+                print(random.choice(["\nThe number entered was incorrect.", "\nAccess Denied.", "\nAunauthroized Access Code", "\nDamn it's the wrong code.", "\nSeriously?", "\nThis is a joke.", "\nGod damn it! We are almost out!", "\nHow many times will I get this wrong?", "\nCome on! Hurry it up!"]))
 
+            elif difficulty == 2:
+              userinput = input(f"Vault Lock |   Etched Number : {inventoryitem5['code']['dif2num']}")
+              if str(userinput) == str(decrypt):
+                print(f"Omg it worked it opend wait there is only 2 items why is there ONLY 2 items inside a huge vault, wait what is it a Key it says 'Exit' on it and a {specialItem} well lets go find {sideCharacter} and escape!")
+                with open(jsonInventory, 'r') as e:
+                  inventoryitem5 = json.load(e)
+                with open(jsonInventory, 'r') as e:
+                  inventoryvault = json.load(e)
 
+                inventoryvault["unlocks"].append("vaultopen")
+                inventoryvault["items"].append("Key (Exit)")
+                inventoryvault["items"].append(f"{specialItem}")
+                inventoryvault["unlocks"].append("sidedeath")
 
+                with open(jsonInventory, 'w') as f:
+                  json.dump(inventoryvault, f, indent=2)
+              else:
+                print(random.choice(["\nThe number entered was incorrect.", "\nAccess Denied.", "\nAunauthroized Access Code", "\nDamn it's the wrong code.", "\nSeriously?", "\nThis is a joke.", "\nGod damn it! We are almost out!", "\nHow many times will I get this wrong?", "\nCome on! Hurry it up!"]))
 
+            elif difficulty == 3:
+              userinput = input(f"Vault Lock |   Etched Number : {inventoryitem5['code']['dif3num']}")
+              if str(userinput) == str(decrypt):
+                print(f"Omg it worked it opend wait there is only 2 items why is there ONLY 2 items inside a huge vault, wait what is it a Key it says 'Exit' on it and a {specialItem} well lets go find {sideCharacter} and escape!")
+                with open(jsonInventory, 'r') as e:
+                  inventoryvault = json.load(e)
 
+                inventoryvault["unlocks"].append("vaultopen")
+                inventoryvault["items"].append("Key (Exit)")
+                inventoryvault["items"].append(f"{specialItem}")
+                inventoryvault["unlocks"].append("sidedeath")
 
+                with open(jsonInventory, 'w') as f:
+                  json.dump(inventoryvault, f, indent=2)
+              else:
+                print(random.choice(["\nThe number entered was incorrect.", "\nAccess Denied.", "\nAunauthroized Access Code", "\nDamn it's the wrong code.", "\nSeriously?", "\nThis is a joke.", "\nGod damn it! We are almost out!", "\nHow many times will I get this wrong?", "\nCome on! Hurry it up!"]))
 
-
-
+              if not userinput.isnumeric():
+                print(random.choice(["\nThis keypad only has numbers, not letters.", "\nHuh? I dont see a letter here", "\nMaybe its a number there are no numbers here"]))
+              
+          
+        else:
+          if difficulty == 1:
+            print(random.choice(["\nThe vault looks like it has stuff etched into it it says {}, maybe this is the code huh simple\n", "Is that a number? wait no its etched into the vault huh it says.. {}"]).format(inventoryitem5['code']['dif1num']))
+          elif difficulty == 2:
+            print(random.choice(["\nThe vault looks like it has stuff etched into it it says {}, maybe this is the code huh simple\n", "Is that a number? wait no its etched into the vault huh it says.. {}"]).format(inventoryitem5['code']['dif2num']))
+          elif difficulty == 3:
+            print(random.choice(["\nThe vault looks like it has stuff etched into it it says {}, maybe this is the code huh simple\n", "Is that a number? wait no its etched into the vault huh it says.. {}"]).format(inventoryitem5['code']['dif3num']))
+          
       else:
         print(random.choice(["Maybe i should go finish off the decryption table", "Huh maybe the decryption table will help me"]))
       

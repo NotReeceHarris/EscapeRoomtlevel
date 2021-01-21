@@ -156,6 +156,8 @@ def corridor():
   while True:
     with open(jsonInventory, 'r') as e:
       inventoryshow = json.load(e)
+    if "sidedeath" in inventoryshow["unlocks"]:
+      print(random.choice(["OMG! is is that {} are they dead omg\n* You start running to the exit*\nif i dont get out now im next", "IS IS that {} *You nearly faint*\nthere arm is on the other side of the rooms,\nif i dont get our now im nexrt"]).format(sideCharacter))
     userInput = input(str(commandLine.format('Outer Rooms')))
     if userInput.lower() == "help":
       print(dialog["spacer"])

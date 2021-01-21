@@ -48,6 +48,15 @@ def Room4Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
     currentItems = itemsJson["Room4CastleItems"]
 
 
+  with open(jsonInventory, 'r') as e:
+      inventoryreset = json.load(e)
+  if "keyroom5" in inventoryreset["unlocks"]:
+    pass
+  else:
+    inventoryreset["unlocks"].append("keyroom5")
+  with open(jsonInventory, 'w') as f:
+    json.dump(inventoryreset, f, indent=2)
+
   while True:
     x = random.choice(["item1room4", "item2room4", "item3room4", "item4room4"])
     y = random.choice(["item1room4", "item2room4", "item3room4", "item4room4"])
@@ -63,13 +72,6 @@ def Room4Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
       with open(jsonInventory, 'w') as f:
         json.dump(inventoryreset, f, indent=2)
       break
-
-    with open(jsonInventory, 'r') as e:
-      inventoryitem4 = json.load(e)
-    if "keyroom5" in inventoryitem4["unlocks"]:
-      pass
-    else:
-      inventoryitem4["unlocks"].append("keyroom5")
 
 
   while True:
@@ -101,14 +103,14 @@ def Room4Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         if "item1room4" in inventoryitem4["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 4"))
+          print(random.choice(dialog["decryptiongraph"]).format("Decrypt table part 4"))
           inventoryitem4["items"].append("Decrypt table part 4")
           inventoryitem4["unlocks"].append("item1room4")
       elif inventoryitem4["locations"]["otherlocation"] == "item1room4":
         if "item1room4" in inventoryitem4["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 3"))
+          print(random.choice(dialog["decryptiongraph"]).format("Decrypt table part 3"))
           inventoryitem4["items"].append("Decrypt table part 3")
           inventoryitem4["unlocks"].append("item1room4")
           inventoryitem4["unlocks"].append("room4paper")
@@ -133,14 +135,14 @@ def Room4Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         if "item2room4" in inventoryitem2["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 4"))
+          print(random.choice(dialog["decryptiongraph"]).format("Decrypt table part 4"))
           inventoryitem2["items"].append("Decrypt table part 4")
           inventoryitem2["unlocks"].append("item2room4")
       elif inventoryitem2["locations"]["otherlocation"] == "item2room4":
         if "item2room4" in inventoryitem2["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 3"))
+          print(random.choice(dialog["decryptiongraph"]).format("Decrypt table part 3"))
           inventoryitem2["items"].append("Decrypt table part 3")
           inventoryitem2["unlocks"].append("item2room4")
           inventoryitem2["unlocks"].append("room4paper")
@@ -165,14 +167,14 @@ def Room4Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         if "item3room4" in inventoryitem3["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 4"))
+          print(random.choice(dialog["decryptiongraph"]).format("Decrypt table part 4"))
           inventoryitem3["items"].append("Decrypt table part 4")
           inventoryitem3["unlocks"].append("item3room4")
       elif inventoryitem3["locations"]["otherlocation"] == "item3room4":
         if "item3room4" in inventoryitem3["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 3"))
+          print(random.choice(dialog["decryptiongraph"]).format("Decrypt table part 3"))
           inventoryitem3["items"].append(f"Decrypt table part 3")
           inventoryitem3["unlocks"].append("item3room4")
           inventoryitem3["unlocks"].append("room4paper")
@@ -197,14 +199,14 @@ def Room4Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         if "item4room4" in inventoryitem4["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 4"))
+          print(random.choice(dialog["decryptiongraph"]).format("Decrypt table part 4"))
           inventoryitem4["items"].append("Decrypt table part 4")
           inventoryitem4["unlocks"].append("item4room4")
       elif inventoryitem4["locations"]["otherlocation"] == "item4room4":
         if "item4room4" in inventoryitem4["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 4"))
+          print(random.choice(dialog["decryptiongraph"]).format("Decrypt table part 4"))
           inventoryitem4["items"].append(f"Decrypt table part 3")
           inventoryitem4["unlocks"].append("item4room4")
           inventoryitem4["unlocks"].append("room4paper")
