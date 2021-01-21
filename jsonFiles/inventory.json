@@ -1,13 +1,11 @@
 {
   "items": [
-    "room1key"
+    "Key (Room 1)"
   ],
   "randomItems": [],
-  "unlocks": [
-    "item1room1"
-  ],
+  "unlocks": [],
   "locations": {
-    "keylocation": "item3room1",
-    "otherlocation": "item4room1"
+    "keylocation": "",
+    "otherlocation": ""
   }
 }

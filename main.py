@@ -45,8 +45,11 @@ difficulty = 0
 
 def startGame():
 
+  with open(jsonInventory, 'r') as a:
+    inventoryreset = json.load(a)
+
   resetinventory = {
-    "items": ["room1key"],
+    "items": ["Key (Room 1)"],
     "randomItems": [],
     "unlocks": [],
     "locations": {
@@ -55,10 +58,10 @@ def startGame():
     }
     }
   
-  inventory.update(resetinventory)
+  inventoryreset.update(resetinventory)
 
   with open(jsonInventory, 'w') as f:
-    json.dump(inventory, f, indent=2)
+    json.dump(inventoryreset, f, indent=2)
 
   if data["Debug"]:
     print(dialog["debug"].format(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, inventorySpace, specialItem, specialRoom, escapeDoorLocation))
@@ -136,7 +139,7 @@ def corridor():
       print(f"room1        ->  {roomName1}\nroom2        ->  {roomName2}\nroom3        ->  {roomName3}\nroom4        ->  {roomName4}\nroom5        ->  {roomName5}\nhelp         ->  Help Menu\ninventory    -> Show inventory")
       print(dialog["spacer"])
     elif userInput.lower() == "room1":
-      if "room1key" in inventory["items"]:
+      if "Key (Room 1)" in inventory["items"]:
         roomA()
       else:
         print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
@@ -160,6 +163,13 @@ def corridor():
         roomE()
       else:
         print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
+    elif userInput.lower() == "inventory":
+        with open(jsonInventory, 'r') as e:
+          inventoryshow = json.load(e)
+        print("\n-----------------------------------------\n")
+        for x in inventoryshow["items"]:
+            print(x)
+        print("\n-----------------------------------------\n")
     else:
       print(f'{dialog["spacer"]}Invalid command try "help".{dialog["spacer"]}')
   

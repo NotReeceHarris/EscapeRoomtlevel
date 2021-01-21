@@ -18,10 +18,10 @@
     "knife"
   ],
   "Room4SpaceStationItems": [
-    "Space vial",
+    "vial",
     "Jetpack",
     "Dehydrated food",
-    "Space"
+    "Spare engine"
   ],
   "Room5SpaceStationItems": [
     "Nuclear core",
@@ -42,22 +42,22 @@
     "Screwdriver"
   ],
   "Room3AbandonedHospitalItems": [
-    "",
-    "filler",
-    "filler",
-    "filler"
+    "Wooden Toy",
+    "Doll",
+    "Desk",
+    "Dead Rat"
   ],
   "Room4AbandonedHospitalItems": [
-    "fillerfiller",
-    "fillerfiller",
-    "fillerfiller",
-    "fillerfiller"
+    "Scissors",
+    "Syringe",
+    "X-Ray Machine",
+    "Printer"
   ],
   "Room5AbandonedHospitalItems": [
-    "fillerfiller",
-    "fillerfiller",
-    "fillerfiller",
-    "fillerfiller"
+    "Test Tube",
+    "Beaker",
+    "Morphine",
+    "Broken Bone Cast"
   ],
   "Room1PrisonItems": [
     "handcuffs",
@@ -75,7 +75,7 @@
     "Detergent",
     "soft cloth",
     "basket",
-    "filler"
+    "Collar"
   ],
   "Room4PrisonItems": [
     "goblet",
@@ -84,39 +84,39 @@
     "bible"
   ],
   "Room5PrisonItems": [
-    "filler",
+    "Lethal injection syringe",
     "straight jacket",
     "sharpened straight jacket locks",
     "exposed spring"
   ],
   "Room1CastleItems": [ 
     "Pike",
-    "filler",
-    "filler",
-    "filler"
+    "Shackle",
+    "Chain",
+    "Carriage"
   ],
   "Room2CastleItems": [ 
     "Knife",
-    "filler",
-    "filler",
-    "filler"
+    "Cleaver",
+    "Meathook",
+    "Clay Pot"
   ],
   "Room3CastleItems": [
-    "filler",
-    "filler",
-    "filler",
-    "filler"
+    "Saddle",
+    "Hay Bale",
+    "Bow",
+    "Wooden Stake"
   ],
   "Room4CastleItems": [
-    "filler",
-    "filler",
-    "filler",
-    "filler"
+    "Sword",
+    "Armour pile",
+    "Forge",
+    "Crucifix"
   ],
   "Room5CastleItems": [
-    "filler",
-    "filler",
-    "filler",
-    "filler"
+    "Crown",
+    "Scepter",
+    "Globe",
+    "Fine wine glass"
   ]
 }

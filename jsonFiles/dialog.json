@@ -241,16 +241,25 @@
   ],
   "iteminspectdialog": [
     "\nYou dont want to touch the {}, but you know it might be useful",
-    "\nA {}? Unusual maybe this might hold a secret"
+    "\nA {}? Unusual maybe this might hold a secret",
+    "\nI didn't expect to see a {}, I dont think i could find a use to this.",
+    "\nWhat a find! {} Looks very important! however this doesnt look like something i could use.",
+    "\nA {}, perhaps somebody misplaced this- it doesn't look very beneficial to our survival."
     
   ],
   "pickupkey": [
     "\n - A key! I wonder what this is for? It says {} on it.",
-    "\n - Keys? wait this one is the only real one, it says {}"
+    "\n - Keys? wait this one is the only real one, it says {}",
+	  "\n - It wouldn't be an extremely creepy turn of events if there wasn't a key that says {} on it.",
+	  "\n - A key! I'm lucky it has a tag on it or I would be here all day looking for the lock.",
+    "\n - You got: Key {}! (This is very cliche, yes.)"
   ],
   "alreadysearched": [
     "\n- I've already taken the stuff from here!",
     "\n- Maybe I should stop wasting my time searching stuff I've already seen",
-    "\n- Haven't I already searched this ?"
+    "\n- Haven't I already searched this ?",
+    "\n- Theres nothing here, iv already had a look.",
+    "\n- Uhm didnt i already search this?",
+    "\n- I need to escape now, I cant keep searching the same thing"
   ]
 }

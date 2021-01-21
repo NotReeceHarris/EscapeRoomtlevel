@@ -35,7 +35,7 @@ cabnetcode = random.randint(1000, 9999)
 
 def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty, escapeDoorLocation):
   #
-  print(random.choice(dialog[f"{scene}{roomName1}"]))
+  print("\n" + random.choice(dialog[f"{scene}{roomName1}"]))
   currentItems = []
   if scene == "Space Station":
     currentItems = itemsJson["Room1SpaceStationItems"]
@@ -53,16 +53,18 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
     if x == y or y == x:
       pass
     else:
-      inventory["locations"]["keylocation"] = x
-      inventory["locations"]["otherlocation"] = y
+      with open(jsonInventory, 'r') as e:
+        inventoryreset = json.load(e)
+      inventoryreset["locations"]["keylocation"] = x
+      inventoryreset["locations"]["otherlocation"] = y
       with open(jsonInventory, 'w') as f:
-        json.dump(inventory, f, indent=2)
+        json.dump(inventoryreset, f, indent=2)
       break
 
   while True:
 
     if specialRoom == roomName1:
-        specialRoom = True
+      specialRoom = True
     UserInput = input(str(commandLine.format(
         roomName1)))  #The input is put in the varaible UserInput
 
@@ -74,50 +76,174 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
             print(f'item{intd}       -> Inspect {x}')
         print("storageunit -> Inspect storage unit\nbrokenglass -> inspect broken glass\n\n    --------------------------\n")
         if escapeDoorLocation == "room1":
-          print("LockedDoor   -> Door")
+          print("lockeddoor   -> Door")
         print(
             "help         -> Help Menu\ninventory    -> Opens your inventory\nexit         -> Return to corridor"
         )
         print("\n-----------------------------------------\n")
     elif UserInput.lower() == "item1":
+
+      with open(jsonInventory, 'r') as e:
+        inventoryitem1 = json.load(e)
+
       print(random.choice(dialog["iteminspectdialog"]).format(currentItems[0]))
-      if inventory["locations"]["keylocation"] == "item1room1":
-        if "itemkeyroom1" in inventory["unlocks"]:
+      if inventoryitem1["locations"]["keylocation"] == "item1room1":
+        if "item1room1" in inventoryitem1["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice(dialog["pickupkey"]).format("Lock Box key"))
-          inventory["items"].append("Lock Box key")
-          inventory["unlocks"].append("itemkeyroom1")
-      elif inventory["locations"]["otherlocation"] == "item1room1":
-        if "itemotherroom1" in inventory["unlocks"]:
-          print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a pass code {}", "\n - filler"]).format(cabnetcode))
-          inventory["unlocks"].append("itemotherroom1")
-        else:
+          print(random.choice(dialog["pickupkey"]).format("Key (Room1 LockBox)"))
+          inventoryitem1["items"].append("Key (Room1 LockBox)")
+          inventoryitem1["unlocks"].append("item1room1")
+      elif inventoryitem1["locations"]["otherlocation"] == "item1room1":
+        if "item1room1" in inventoryitem1["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
+        else:
+          print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format(cabnetcode))
+          inventoryitem1["items"].append(f"Paper ({cabnetcode})")
+          inventoryitem1["unlocks"].append("item4room1")
+          inventoryitem1["unlocks"].append("room1paper")
       else:
-        print(random.choice(["\n - There is nothing here its just a {}", "\n - Maybe there is nothing to this {}, its just bare."]).format(currentItems[0]))
-        inventory["unlocks"].append("item1room1")
+        if "item1room1" in inventoryitem1["unlocks"]:
+          print(random.choice(dialog["alreadysearched"]))
+        else:
+          print(random.choice(["\n - There is nothing here its just a {}", "\n - Maybe there is nothing to this {}, its just bare."]).format(currentItems[0]))
+          inventoryitem1["unlocks"].append("item1room1")
+
       with open(jsonInventory, 'w') as f:
-        json.dump(inventory, f, indent=2)
+        json.dump(inventoryitem1, f, indent=2)
+
     elif UserInput.lower() == "item2":
+
       #currentItems[1]
+      with open(jsonInventory, 'r') as e:
+        inventoryitem2 = json.load(e)
+
       print(random.choice(dialog["iteminspectdialog"]).format(currentItems[1]))
+      if inventoryitem2["locations"]["keylocation"] == "item2room1":
+        if "item2room1" in inventoryitem2["unlocks"]:
+          print(random.choice(dialog["alreadysearched"]))
+        else:
+          print(random.choice(dialog["pickupkey"]).format("Key (Room1 LockBox)"))
+          inventoryitem2["items"].append("Key (Room1 LockBox)")
+          inventoryitem2["unlocks"].append("item2room1")
+      elif inventoryitem2["locations"]["otherlocation"] == "item2room1":
+        if "item2room1" in inventoryitem2["unlocks"]:
+          print(random.choice(dialog["alreadysearched"]))
+        else:
+          print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format(cabnetcode))
+          inventoryitem2["items"].append(f"Paper ({cabnetcode})")
+          inventoryitem2["unlocks"].append("item4room1")
+          inventoryitem2["unlocks"].append("room1paper")
+      else:
+        if "item2room1" in inventoryitem2["unlocks"]:
+          print(random.choice(dialog["alreadysearched"]))
+        else:
+          print(random.choice(["\n - There is nothing here its just a {}", "\n - Maybe there is nothing to this {}, its just bare."]).format(currentItems[1]))
+          inventoryitem2["unlocks"].append("item2room1")
+
+      with open(jsonInventory, 'w') as f:
+        json.dump(inventoryitem2, f, indent=2)
+
     elif UserInput.lower() == "item3":
       #currentItems[2]
+      
+      with open(jsonInventory, 'r') as e:
+        inventoryitem3 = json.load(e)
+
       print(random.choice(dialog["iteminspectdialog"]).format(currentItems[2]))
+      if inventoryitem3["locations"]["keylocation"] == "item3room1":
+        if "item3room1" in inventoryitem3["unlocks"]:
+          print(random.choice(dialog["alreadysearched"]))
+        else:
+          print(random.choice(dialog["pickupkey"]).format("Key (Room1 LockBox)"))
+          inventoryitem3["items"].append("Key (Room1 LockBox)")
+          inventoryitem3["unlocks"].append("item3room1")
+      elif inventoryitem3["locations"]["otherlocation"] == "item3room1":
+        if "item3room1" in inventoryitem3["unlocks"]:
+          print(random.choice(dialog["alreadysearched"]))
+        else:
+          print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format(cabnetcode))
+          inventoryitem3["items"].append(f"Paper ({cabnetcode})")
+          inventoryitem3["unlocks"].append("item4room1")
+          inventoryitem3["unlocks"].append("room1paper")
+      else:
+        if "item3room1" in inventoryitem3["unlocks"]:
+          print(random.choice(dialog["alreadysearched"]))
+        else:
+          print(random.choice(["\n - There is nothing here its just a {}", "\n - Maybe there is nothing to this {}, its just bare."]).format(currentItems[2]))
+          inventoryitem3["unlocks"].append("item3room1")
+
+      with open(jsonInventory, 'w') as f:
+        json.dump(inventoryitem3, f, indent=2)
+
     elif UserInput.lower() == "item4":
       #currentItems[3]
+      
+      with open(jsonInventory, 'r') as e:
+        inventoryitem4 = json.load(e)
+
       print(random.choice(dialog["iteminspectdialog"]).format(currentItems[3]))
+      if inventoryitem4["locations"]["keylocation"] == "item4room1":
+        if "item4room1" in inventoryitem4["unlocks"]:
+          print(random.choice(dialog["alreadysearched"]))
+        else:
+          print(random.choice(dialog["pickupkey"]).format("Key (Room1 LockBox)"))
+          inventoryitem4["items"].append("Key (Room1 LockBox)")
+          inventoryitem4["unlocks"].append("item4room1")
+      elif inventoryitem4["locations"]["otherlocation"] == "item4room1":
+        if "item4room1" in inventoryitem4["unlocks"]:
+          print(random.choice(dialog["alreadysearched"]))
+        else:
+          print(random.choice(["\n- A peice of paper? its all wet, but i can only just see a passcode {}", "\n - Paper? maybe it has someth... a number {} i should remember this."]).format(cabnetcode))
+          inventoryitem4["items"].append(f"Paper ({cabnetcode})")
+          inventoryitem4["unlocks"].append("item4room1")
+          inventoryitem4["unlocks"].append("room1paper")
+      else:
+        if "item4room1" in inventoryitem4["unlocks"]:
+          print(random.choice(dialog["alreadysearched"]))
+        else:
+          print(random.choice(["\n - There is nothing here its just a {}", "\n - Maybe there is nothing to this {}, its just bare."]).format(currentItems[3]))
+          inventoryitem4["unlocks"].append("item4room1")
+
+      with open(jsonInventory, 'w') as f:
+        json.dump(inventoryitem4, f, indent=2)
+
     elif UserInput.lower() == "storageunit":
-      print()
+
+      with open(jsonInventory, 'r') as e:
+        inventoryitem5 = json.load(e)
+        
+      if "Key (Room1 LockBox)" in inventoryitem5["items"] or "boxopened" in inventoryitem5["unlocks"]:
+        if "boxopened" in inventoryitem5["unlocks"]:
+          print(random.choice("Right this lock box needs a code", "maybe i have the code", "Maybe the code is on a note."))
+        else:
+          print(random.choice(["A lockbox? huh is it open!", "Why is there only a little lockbox in this huge Storage unit"]))
+          inventoryitem5["unlocks"].append("boxopened")
+        if "room1paper" in inventoryitem5["unlocks"]:
+          pass
+        
+      else:
+        print(random.choice(["Theres a lock, maybe theres a key around here", "Its locked, maybe a key is around here", "A lock? whats hidden in here, maybe a key would tell me", "Well im not getting into this maybe i need a key"]))
+
+      with open(jsonInventory, 'w') as f:
+        json.dump(inventoryitem5, f, indent=2)
+
+
     elif UserInput.lower() == "brokenglass":
       print()
     elif UserInput.lower() == "inventory":
+      with open(jsonInventory, 'r') as e:
+        inventoryshow = json.load(e)
         print("\n-----------------------------------------\n")
-        for x in inventory["items"]:
+        for x in inventoryshow["items"]:
             print(x)
         print("\n-----------------------------------------\n")
     elif UserInput.lower() == "exit":
         return
+    elif UserInput.lower() == "lockeddoor":
+      if escapeDoorLocation == "room1":
+        pass
+      else:
+        print(dialog["commandError"])
     else:
         print(dialog["commandError"])
