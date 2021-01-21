@@ -2,9 +2,9 @@
 
 import random
 import time
-from inventorySystem import SeeI, AddI, DropI
 import json
 from Rooms import Room1, Room2, Room3, Room4, Room5
+from calculate import cal
 
 # --------------------------------------- Variables
 
@@ -44,6 +44,22 @@ difficulty = 0
 # --------------------------------------- Start Function
 
 def startGame():
+
+  resetinventory = {
+    "items": ["room1key"],
+    "randomItems": [],
+    "unlocks": [],
+    "locations": {
+      "keylocation": "",
+      "otherlocation": ""
+    }
+    }
+  
+  inventory.update(resetinventory)
+
+  with open(jsonInventory, 'w') as f:
+    json.dump(inventory, f, indent=2)
+
   if data["Debug"]:
     print(dialog["debug"].format(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, inventorySpace, specialItem, specialRoom, escapeDoorLocation))
   while True:
@@ -60,8 +76,16 @@ def startGame():
       break
     else:
       print("Please Input a valid difficulty!")
+  allcalc = cal()
+  allposs = allcalc['allposs']
+  allvars = allcalc['allvar']
+  alllines = allcalc['lines']
+  allperc = allcalc['perc']
+  allpossf = f"{allposs:,}"
+  allvarsf = f"{allvars:,}"
+  alllinesf = f"{alllines:,}"
 
-  print(dialog["start"].format(difficulty))
+  print(dialog["start"].format(allpossf, allvarsf, alllinesf, difficulty, allperc, allpossf, allvarsf, alllinesf))
   input('\nPress Enter to start...')
   global Start
   Start = time.time()
@@ -104,6 +128,7 @@ def startGame():
   corridor()
 
 def corridor():
+
   while True:
     userInput = input(str(commandLine.format('Outer Rooms')))
     if userInput.lower() == "help":

@@ -2,7 +2,7 @@
   "spacer": "\n-----------------------------------------\n",
   "commandError": "\n-----------------------------------------\nSorry that isnt a valid command try 'help' to get a list of commands\n-----------------------------------------\n",
   "debug": "-------Debugging Panel-------\n\nMain Character       : {}\nSide Character       : {}\nAntagonist Character : {}\n\nScene: {}\n\nRoom1: {}\nRoom2: {}\nRoom3: {}\nRoom4: {}\nRoom5: {}\n\nInventory Space : {}\nSpecial Item    : {}\nSpecial Room    : {}\nEscapeRoom      : {}\n\n-----------------------------\n",
-  "start": "-----------------------------------------\nWelcome to Kyle's, Deven's, Elijah's\nand Reece's Escape Room project:\n\nWithin the interative escape room there\nare 1,966,080 possible combinations of\nrooms, names, scenes and items so you\nwill never have the same experience once!\n\nYou are going to have a different\nexperience as you selected difficulty {}\nthis mean That the AI, puzzles and timers\nwill be changed due to the difficulty\nyou have chosen\n-----------------------------------------",
+  "start": "-----------------------------------------\nWelcome to Kyle's, Deven's, Elijah's\nand Reece's Escape Room project:\n\nWithin the interative escape room there\nare {} possible combinations of\nrooms, names, scenes and items, {}\ndiffrent options and {} lines of code, so you\nwill never have the same experience once!\n\nYou are going to have a different\nexperience as you selected difficulty {}\nthis mean That the AI, puzzles and timers\nwill be changed due to the difficulty\nyou have chosen (you had {}% to get this run)\n\n*small easter egg the {}, {} and\n{}automatically change when we add stuff*\n-----------------------------------------",
   "dialog1.0": "\n-----------------------------------------\n\nYou wake up, you look around. Standing above you is a cloaked figure.\n-----------------------------------------",
   "dialog1.1": "\nHurriedly you scuttle away.\n-----------------------------------------",
   "dialog1.2": "\nOn the way you bump into someone.\n-----------------------------------------",
@@ -29,25 +29,25 @@
   ],
   "Abandoned HospitalOuter": [
     "As you walk out into the corridor you nearly trip over a rusty gurney as you search around the room with a quick burst of paranoia you calm down when you realise no one is watching",
-    "The eerie atmosphere in the corridor is spine chilling, terrified you go back out into t"
+    "The eerie atmosphere in the corridor is spine chilling, terrified you go back out into the silent yet filled corridors"
   ],
   "PrisonOuter": [
-    "filler",
-    ""
+    "The long and narrow corridors are no treat, yet you find yourself moving into them again",
+    "The "
   ],
   "Space StationOuter": [
-    "filler",
+    "As you return to the dark empty corridors, you wonder if the ",
     ""
   ],
   "Space StationOxygen": [
     "As you enter Oxygen control, The feeling of cold crisp air enters your lungs",
-    "Pure oxygen enters your lungs. You cant breath however you start to stabilise",
-    "Fresh air? in space. oh wait im in oxygen control."
+    "Pure oxygen enters your lungs. You can't breath however you start to stabilise",
+    "Fresh air? in space? Oh wait im in oxygen control."
   ],
   "Space StationReactor": [
     "That looks dangerous maybe i should stay away from the reactor",
     "Pulsating power starts to emerge from the reactor",
-    ""
+    "The whirring of the station reactor almost adds a calming atmosphere, but you then remember that you were put here to die so it immediately fades away"
   ],
   "Space StationCafeteria": [
     "The smell of roten food, How! Its all bagged up\n*You look around and see a severd leg*\nWell thats where the smell is comeing from.",
@@ -68,176 +68,189 @@
 
   ],
   "Space StationHangar": [
-	  "You see a large opening in the Hull of the station which leads to the vacume of space, meaning that you must be in the hanger, however not everything is as obviously explained. Containers, Cranes, even a few ships are levitating with no explaination as to why, No other explaination other than the Statue you saw in the previous room. You see the door to the next room, but it's at an higher elevation. You need to find a way to use whatever still functions to make a path to that door. Perhaps You can check the room to your left..."
+	  "You see a large opening in the Hull of the station which leads to the vacume of space, meaning that you must be in the hanger, however not everything is as obviously explained. Containers, Cranes, even a few ships are levitating with no explaination as to why, No other explaination other than the Statue you saw in the previous room."
 
   ],
   "Space StationCommunication": [
-	  "You enter a room filled with green screens, all of which are displaying some sort of code sequence. There are radios on every desk, meaning you must be in the communications room. You can hear the sound of some strange signal eminating from the speakers, probably caused by the strange statue you saw in the previous room. You're in a hurry to leave this station, so you don't have time to look around, however you did notice a lever which might control the power. You see that one of the electrical outlets is eminating electricity, preventing you from touching it. Maybe you could make the signal clearer, then work from there."
+	  "You enter a room filled with green screens, all of which are displaying some sort of code sequence. There are radios on every desk, meaning you must be in the communications room. You can hear the sound of some strange signal eminating from the speakers, probably caused by the strange statue you saw in the previous room. You see that the electrical outlets are eminating electricity, preventing you from touching it."
 
   ],
   "Space StationEngineering": [
-	  "You enter what appears to be engineering, with heavy machines taking up most of the room. You do, however notice a trap door, one that leads to some sort of panic room. You try to analyse your surroundings, but then you're caught off guard by the sudden sound of an alarm going off, and a voice appears over the intercom: 'Nuclear descent protocol deactivated:\n Imminent collision with Earth's surface: In progress.' Perhaps that panic room could come in use, if you could get it open before the station collides with the planet, and you're caught in the crash. You quickly see 4 Generators that seem to be powered, as well as some kind of core holders. You'd best find out how to power those things on."
+	  "You enter what appears to be engineering, with heavy machines taking up most of the room. You do, however notice a trap door, one that leads to some sort of panic room. You try to analyse your surroundings, but then you're caught off guard by the sudden sound of an alarm going off, and a voice appears over the intercom: 'Nuclear descent protocol deactivated:\n Imminent collision with Earth's surface: In progress.' Perhaps that panic room could come in use, if you could get it open before the station collides with the planet, and you're caught in the crash..."
 
   ],
   "Space StationClarity": [
-	  "As you enter the mysteriously named Clarity Room, you hear a voice boom over the intercom: 'Artificial inteligence activated.\nEnjoying yourselves, intruders? \nIt's worth knowing the Cataclysmic Damage you will be responsible for today. \nDo not fool yourselves. This Facility is not simply the fruitless work of some pathetic scientist. \nThis house was built by the Genius Clovis Bray I himself. Within lies humanity's salvation. La fontaine de jouvence. \nMade possible by Clarity control. \nMagnificant, wasn't it? An entity beyond our own dimension.\nAnd the answer to Humanity's eternal struggle. Mortality.\nWere it to fall into the wrong hands, humanity, and the universe, would be utterly doomed.\nI have no reason to believe you are anything other than the wrong hands.\nYou now face Godlike Judgement. May it extend eternally.'\nThe Intercom shut off and an Alarm was booming across the station. You should probably find a way to stop whatever is happening."
+	  "As you enter the mysteriously named Clarity Room, you hear a voice boom over the intercom: 'Artificial inteligence activated.\nEnjoying yourselves, intruders? \nIt's worth knowing the Cataclysmic Damage you will be responsible for today. \nDo not fool yourselves. This Facility is not simply the fruitless work of some pathetic scientist. \nThis house was built by the Genius Clovis Bray I himself. Within lies humanity's salvation. La fontaine de jouvence. \nMade possible by Clarity control. \nMagnificant, wasn't it? An entity beyond our own dimension.\nAnd the answer to Humanity's eternal struggle. Mortality.\nWere it to fall into the wrong hands, humanity, and the universe, would be utterly doomed.\nI have no reason to believe you are anything other than the wrong hands.\nYou now face Godlike Judgement. May it extend eternally.'\nThe Intercom shut off and an Alarm was booming across the station. Leaving the station is a bit more of a priority now."
 
   ],
   "CastleDungeons": [
-    "A foul rotten flesh smell almost as if something has died in here, Well it is a dungeon after all.",
-    ""
+    "A foul rotten flesh smell almost as if something has died in here, Well it is a dungeon after all."
 
   ],
   "CastleCourtyard": [
-    "filler"
+    "The sun rises over one of the towers surrounding the open courtyard. The yard itself is completely devoid of Human life. You and your ally seem to be the only ones here."
 
   ],
   "CastleKitchen": [
-    "filler"
+	"A burning smell fills the Atmosphere. You can insantly see the oven, built into the wall, as you enter the Kitchen."
+    
     
   ],
   "CastleBakeHouse": [
-    "filler"
+    "A burning smell fills the atmosphere. You can see boxes upon boxes of wheat as you enter the castle's Bakehouse."
 
   ],
   "CastleKeep": [
-    "filler"
+    "You enter the base of a heavily fortified tower, Probably the Keep. There is a lot of dangerous stuff in here: Swords, Spears, Arrows, Cannonballs."
     
   ],
   "CastleStables": [
-    "filler"
+    "The smell of manure is pungent, the hay is dry and sharp, blood smeared on the wall. Something has happened here, but what is it."
 
   ],
   "CastleChapel": [
-    "filler"
+    "You pass under a replica of a crucifix with a man nailed into it as you enter the Chapel. There are small pal crosses spread out all over the walls, whilst there are candles strewn out across the floor."
 
   ],
   "CastleBarracks": [
-    "filler"
+    "The statues of Bulky Steel armour stand completely still in the Barracks, Brandishing claymores and pikes. Weapons seem to be scattered all over the floor."
 
   ],
   "CastleWatch Tower": [
-    "filler"
+    "You look out of the opening in the wall and see the outside world. You look further down and see the courtyard of the castle. You're at the top of one of the Castle's watch towers."
 
   ],
   "CastleGreat Hall": [
-    "filler"
+    "The sound of the great doors opening rings throughought the Aincient structure you're in. You've entered the great hall, the closest thing you'll get to a Throne room."
 
   ],
   "Abandoned HospitalICU": [
-    "filler"
+    "You've woken up in an Intensive Care unit. Boxes of Medicine and equipment are spread out all over the floor."
 
   ],
   "Abandoned HospitalA&E": [
-    "filler"
+    "You've woken up in an A&E Room. All sorts of instant treatment equipment is strewn across the floor and the lights above you are flickering."
 
   ],
   "Abandoned HospitalTwelth ward": [
-    "filler"
+    "You're in one of the Hospital's many wards, Overgrowths are embedded into the infrastructure of the walls and all of the chairs had been toppled over or destroyed."
 
   ],
   "Abandoned HospitalReception": [
-    "filler"
+    "You're at a reception desk. The desk itself is heavily damaged, with holes punched out of it. The floor is covered in Grass which has grown into the infrastructure of this almost decade old building."
 
   ],
   "Abandoned HospitalBasement": [
-    "filler"
+    "You've entered the Dimly lit basement. You can make out a bunch of boxes which are lying open, empty. Cobwebs have covered most of the room."
 
   ],
   "Abandoned HospitalChildrens ward": [
-    "filler"
+    "You can barely make out the flower patterns on the wall. This must mean you're in the Children's ward, which hasn't been spared from the decay of the whole building."
 
   ],
   "Abandoned HospitalSurgery": [
-    "filler"
+    "You enter the Surgery room and find, pretty much more of what you've seen. Natural growths, Surgical tools all on the floor, and a rather disturbing amount of relatively fresh blood on the operating table."
     
   ],
   "Abandoned HospitalXray": [
-    "filler"
+    "Upon entering the room, you are greeted with photos of black and white, the air feels like it is bouncing off of your skin- the X-Ray machine still on. Better get out of here quickly"
     
   ],
   "Abandoned HospitalTreatment Room": [
-    "filler"
+    "The thought that this building used to treat people's illnesses and save lives baffles you, this thought hasn't left your mind and continues ti linger as you enter the treatment room."
     
   ],
   "Abandoned HospitalLab": [
-    "filler"
+    "This place looks more like a Science laboratory than a room which is meant to be in a Hospital. Test tubes and Blood Vials are at least somewhat organised on the shelves."
     
   ],
   "Abandoned HospitalIntensive care unit": [
-    "filler"
+    "As you enter the intensive care unit, you wonder if it was even narrowly close to as intense as what you are going through right now."
     
   ],
   "PrisonCell 192": [
-    "filler"
+    "You wake up inside one of the Prison's countless Cells. You have no Idea how or why you're here, but you shouldn't care about any of that, Just getting out of here."
     
   ],
   "PrisonCell 143": [
-    "filler"
+    "Cell 143. As if the rest of this building wasn't ominous enough, your now entering the last place you'd want to be locked up with your name replaced with a number"
     
   ],
   "PrisonDeliveries": [
-    "filler"
+    "Empty ravaged boxes lay strewn accross the concrete floor. Years old- this place is surely abandoned."
 
   ],
   "PrisonWorkshop": [
-    "filler"
+    "As you enter the prison workshop you try not to get hurt on all the machinery and broken glass."
     
   ],
   "PrisonCell 931": [
-    "filler"
+    "As you enter cell 931, you wonder how many more cells there could possibly be in this bastion of a prison."
     
   ],
   "PrisonCell 134": [
-    "filler"
+    "Great! Another incredibly onimous, empty, but probably not safe prison Cell... This place seems like a never ending maze."
     
   ],
   "PrisonKitchen": [
-    "filler"
+    "The thought of food is pleasant seeing as you haven't eaten the entire time you have been here, but as you enter the kitchen you find that there is no food whatsoever...at least no healthy food."
 
   ],
   "PrisonStorage": [
-    "filler"
+    "The dust bellows out of the room as you open the door- 'Storage' It's full of old clothes and supplies."
 
   ],
   "PrisonCell 640": [
-    "filler"
+    "Every time you turn a corner to go down a different corridor, you find yourself in a Mirror image of the Corridor you just left, only the Numbers on the cell doors are different."
     
   ],
   "PrisonCell 920": [
-    "filler"
+    "As you enter prison cell 920 you think that number could have had loads of potential but was ruined by an extra 500 numbers"
     
   ],
   "PrisonLaundry": [
-    "filler"
+    "It seems that every room that has/had a purpose is completely stripped of its products, the laundry room is no exception."
     
   ],
   "PrisonKennel": [
-    "filler"
+    "The kennels are just as empty as any other room, no dogs in sight at all. Shame really, you could have just met your best friend."
     
   ],
   "PrisonOffice": [
-    "filler"
+    "This is by far the only room you have seen that even has a glimpse of sanity, the desks are neat and tidy. As if somebody still worked here....."
     
   ],
   "PrisonInfirmary": [
-    "filler"
+    "A desolate Infirmary, you don't see that very often. Very mysterious I don't have any positive feelings about this place."
     
   ],
   "PrisonChapel": [
-    "filler"
+    "The bloodstained remains of prisoners line the floor- are you sure this is a chapel?"
     
   ],
   "PrisonExecution Chamber": [
-    "filler"
+    "If you don't know what room you're in when you open the door to an Electric chair, you're either way to innocent or refuse to believe you've made your way into an Execution Chamber. Thankfully (or unthankfully depending on how you're feeling) The power is out. So at least you can't just randomly be strapped to the chair and electrocuted."
     
   ],
   "PrisonSolitary": [
-    "filler"
+    "An Isolated, dark, very ominous room? Yep, this is Solitary confinement alright. Obviously questioning what you did to find yourself in this room, let alone the prison has been the normal since you woke up here, but instead of asking the same questions, Why don't you just try and get out of this damned prison."
 
   ],
   "PrisonPadded Solitary": [
     "As you enter the abandoned chamber of a mentally ill patient, a chill shivers down your spine. It's as if you can sense the wails and confusion radiating off of the mattress walls. White. Plain and simple. Is all you see. You feel like if you stay here too long you too, will go insane. You see an empty straight jacket tied to one of the walls, a bed that looks as hard as concrete and blood curdling stench that makes you want to leave as soon as possible."
+  ],
+  "iteminspectdialog": [
+    "\nYou dont want to touch the {}, but you know it might be useful",
+    "\nA {}? Unusual maybe this might hold a secret"
     
+  ],
+  "pickupkey": [
+    "\n - A key! I wonder what this is for? It says {} on it.",
+    "\n - Keys? wait this one is the only real one, it says {}"
+  ],
+  "alreadysearched": [
+    "\n- I've already taken the stuff from here!",
+    "\n- Maybe I should stop wasting my time searching stuff I've already seen",
+    "\n- Haven't I already searched this ?"
   ]
 }

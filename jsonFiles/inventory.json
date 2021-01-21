@@ -2,7 +2,12 @@
   "items": [
     "room1key"
   ],
-  "randomItems": [
-    
-  ]
+  "randomItems": [],
+  "unlocks": [
+    "item1room1"
+  ],
+  "locations": {
+    "keylocation": "item3room1",
+    "otherlocation": "item4room1"
+  }
 }
