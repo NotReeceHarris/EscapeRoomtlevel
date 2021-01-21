@@ -77,7 +77,7 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         for x in currentItems:
             intd += 1
             print(f'item{intd}       -> Inspect {x}')
-        print("storageunit -> Inspect storage unit\n\n    --------------------------\n")
+        print("vault       -> Inspect Vault\n\n    --------------------------\n")
         if escapeDoorLocation == "room5":
           print("lockeddoor   -> Door")
         print(
@@ -94,8 +94,8 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         if "item1room5" in inventoryitem1["unlocks"]:
           print(random.choice(dialog["alreadysearched"]))
         else:
-          print(random.choice(dialog["pickupkey"]).format("Key (Room5 LockBox)"))
-          inventoryitem1["items"].append("Key (Room5 LockBox)")
+          print(random.choice([dialog["decryptiongraph"]]).format("Decrypt table part 5"))
+          inventoryitem1["items"].append("Decrypt table part 5")
           inventoryitem1["unlocks"].append("item1room5")
       elif inventoryitem1["locations"]["otherlocation"] == "item1room5":
         if "item1room5" in inventoryitem1["unlocks"]:

@@ -262,5 +262,10 @@
     "\n- Theres nothing here, iv already had a look.",
     "\n- Uhm didnt i already search this?",
     "\n- I need to escape now, I cant keep searching the same thing"
+  ],
+  "decryptiongraph": [
+    "\n- This must be a peice of the decrpytion table so this is {}",
+    "\n- Look! The other half of the decryption table, it looks like {}",
+	  "\n- You found {}! You put the item in your inventory."
   ]
 }

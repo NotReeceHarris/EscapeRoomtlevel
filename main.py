@@ -47,6 +47,11 @@ def startGame():
 
   with open(jsonInventory, 'r') as a:
     inventoryreset = json.load(a)
+  skullnum1 = random.randint(0, 9)
+  skullnum2 = random.randint(0, 9)
+  skullnum3 = random.randint(0, 9)
+  skullnum4 = random.randint(0, 9)
+  skullnum5 = random.randint(0, 9)
 
   resetinventory = {
     "items": ["Key (Room 1)"],
@@ -59,13 +64,14 @@ def startGame():
     "code":{
       "room1cabnet": random.randint(1000, 9999),
       "room2cabnet": random.randint(1000, 9999),
-      "room3cabnet": random.randint(10000, 99999),
-      "room4cabnet": random.randint(1000, 9999),
+      "room3cabnet": f"{skullnum1} {skullnum2} {skullnum3} {skullnum4} {skullnum5}",
+      "room4cabnet": f"{skullnum1}{skullnum2}{skullnum3}{skullnum4}{skullnum5}",
       "room5cabnet": random.randint(1000, 9999)
     },
     "timestart": int(time.time()),
     "otherdata": {
-      "room2": []
+      "room2": [],
+      "table": []
     }
     }
   
@@ -162,30 +168,30 @@ def corridor():
       else:
         print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
     elif userInput.lower() == "room3":
+      if "Key (Room 3)" in inventoryshow["items"]:
+        roomC()
+      else:
+        print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
+    elif userInput.lower() == "room4":
       print(random.choice(["\nOh this doesnt need a key theres a keypad!", "\nfiller"]))
       while True:
         with open(jsonInventory, 'r') as e:
           inventoryshow = json.load(e)
-        userinput01 = str(input("Enter passcode\n>#> "))
-        if not userInput.numerical():
-          print(random.choice(["This keypad only has numbers, not letters.", "Huh? I dont see a letter here", "Maybe its a number there are no numbers here"]))
-        elif userInput == inventoryshow["code"]["room3cabnet"]:
-          print("\nHuh it worked...","\nWow....I'm really good at guessing this, aren't I?","\nSo this is the power of completely guessing a keypad sequence?")
-          roomC()
+        userinput01 = input("\nEnter passcode\n>#> ")
+        if not userinput01.isnumeric():
+          print(random.choice(["\nThis keypad only has numbers, not letters.", "\nHuh? I dont see a letter here", "\nMaybe its a number there are no numbers here"]))
+        elif str(userinput01) == str(inventoryshow["code"]["room4cabnet"]):
+          print("\nHuh it worked...\n", "\nWow....I'm really good at guessing this, aren't I?\n", "\nSo this is the power of completely guessing a keypad sequence?\n")
+          roomD()
         else:
           print(random.choice(["\nThe number entered was incorrect.", "\nAccess Denied.", "\nAunauthroized Access Code", "\nDamn it's the wrong code.", "\nSeriously?", "\nThis is a joke.", "\nGod damn it! We are almost out!", "\nHow many times will I get this wrong?", "\nCome on! Hurry it up!"]))
-      else:
-        print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
-    elif userInput.lower() == "room4":
-      if "Key (Room 4)" in inventoryshow["items"]:
-        roomD()
-      else:
-        print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
+        break
+
     elif userInput.lower() == "room5":
-      if "Key (Room 5)" in inventoryshow["items"]:
+      if "keyroom5" in inventoryitem4["unlocks"]:
         roomE()
       else:
-        print(random.choice(["You try to open the door, it rattles. you need a key!", "Theres a key hole, maybe you need a key for this room", "This door wont budge without a key!"]))
+        print("\nThere doesnt seem to be a lock, maybe its jammed i should go check the other rooms\n", "\nmaybe its stuck i should go check the other rooms and figure this out later\n", "\nhuh its stuck maybe i should go check the other rooms and come back later\n")
     elif userInput.lower() == "inventory":
         with open(jsonInventory, 'r') as e:
           inventoryshow = json.load(e)

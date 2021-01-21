@@ -1,49 +1,22 @@
 {
   "items": [
-    "Key (Room 1)",
-    "Paper (9603)",
-    "Key (Room1 LockBox)",
-    "Black Light",
-    "Key (Room 2)",
-    "Key (Room 3)",
-    "Paper (8468)",
-    "Key (Room3 LockBox)"
+    "Key (Room 1)"
   ],
-  "unlocks": [
-    "item1room1",
-    "item2room1",
-    "room1paper",
-    "item3room1",
-    "item4room1",
-    "room1lockbox",
-    "item2room2",
-    "item1room2",
-    "item2room2",
-    "trapdoor",
-    "keypad",
-    "item1room3",
-    "room3paper",
-    "item3room3"
-  ],
+  "unlocks": [],
   "locations": {
-    "keylocation": "item3room3",
-    "otherlocation": "item1room3"
+    "keylocation": "",
+    "otherlocation": ""
   },
   "code": {
-    "room1cabnet": 9603,
-    "room2cabnet": "4563",
-    "room3cabnet": 8468,
-    "room4cabnet": 1007,
-    "room5cabnet": 4694
+    "room1cabnet": 4121,
+    "room2cabnet": 8722,
+    "room3cabnet": "9 4 0 9 0",
+    "room4cabnet": "94090",
+    "room5cabnet": 2248
   },
-  "timestart": 1611250277,
+  "timestart": 1611258937,
   "otherdata": {
-    "room2": [
-      3,
-      4,
-      5,
-      6
-    ]
+    "room2": []
   },
   "randomItems": []
 }
