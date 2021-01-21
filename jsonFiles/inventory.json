@@ -1,34 +1,75 @@
 {
   "items": [
     "Key (Room 1)",
+    "Paper (4258)",
     "Key (Room1 LockBox)",
-    "Paper (2159)"
+    "Black Light",
+    "Key (Room 2)",
+    "Key (Room 3)",
+    "Paper (4258)"
   ],
   "unlocks": [
     "item1room1",
+    "room1paper",
     "item2room1",
-    "item4room1",
+    "room1lockbox",
+    "item1room2",
+    "item2room2",
+    "item2room2",
+    "trapdoor",
+    "keypad",
+    "item1room3",
+    "item2room3",
+    "item3room3",
+    "room3paper",
+    "item4room3",
+    "keyroom5",
+    "item1room4",
+    "room4paper",
+    "item2room4",
+    "item3room4",
+    "item4room4",
+    "item1room5",
+    "item2room5",
+    "item3room5",
+    "item4room5",
+    "room5paper",
     "item3room1",
-    "room1paper"
+    "room1paper",
+    "item4room1",
+    "vault",
+    "vault"
   ],
   "locations": {
-    "keylocation": "item2room1",
-    "otherlocation": "item3room1"
+    "keylocation": "item2room5",
+    "otherlocation": "item3room5"
   },
   "code": {
-    "room1cabnet": 2159,
-    "room2cabnet": 6035,
-    "room3cabnet": "7 9 4 0 5",
-    "room4cabnet": "79405",
-    "dif1num": "7 7 6 8 0",
-    "dif2num": "0 1 6 8 6 0 0 1",
-    "dif3num": "1 1 8 9 0 6 5 9 2 4 6 5 2"
+    "room1cabnet": 4258,
+    "room2cabnet": "3770",
+    "room3cabnet": "0 0 3 5 1",
+    "room4cabnet": "00351",
+    "dif1num": "2 5 1 6 4",
+    "dif2num": "9 8 1 1 5 8 6 4",
+    "dif3num": "4 8 6 3 4 5 9 1 2 5 3 5 5"
   },
-  "timestart": 1611265484,
+  "timestart": 1611271623,
   "otherdata": {
-    "room2": [],
-    "table": [],
-    "difficulty": 0
+    "room2": [
+      0,
+      3,
+      7,
+      7
+    ],
+    "table": [
+      "Decrypt table part 1",
+      "Decrypt table part 2",
+      "Decrypt table part 3",
+      "Decrypt table part 4",
+      "Decrypt table part 5",
+      "Decrypt table part 6"
+    ],
+    "difficulty": 2
   },
   "randomItems": []
 }

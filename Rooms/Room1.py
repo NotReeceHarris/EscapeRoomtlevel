@@ -72,6 +72,7 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         roomName1)))  #The input is put in the varaible UserInput
 
     if UserInput.lower() == "help":
+        print(dialog["clear"])
         print("\n-----------------------------------------\n")
         intd = 0
         for x in currentItems:

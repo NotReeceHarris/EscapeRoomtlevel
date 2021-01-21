@@ -43,7 +43,7 @@ commandLine = '\nRoom: {}  |  Commands: Help, Inventory\n >#> '
 # --------------------------------------- Start Function
 
 def startGame():
-
+  print(dialog["clear"])
   with open(jsonInventory, 'r') as a:
     inventoryreset = json.load(a)
   skullnum1 = random.randint(0, 9)
@@ -84,23 +84,28 @@ def startGame():
 
   if data["Debug"]:
     print(dialog["debug"].format(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, inventorySpace, specialItem, specialRoom, escapeDoorLocation))
+
+  with open(jsonInventory, 'r') as a:
+     inventorydiffset = json.load(a)
+
   while True:
-    with open(jsonInventory, 'r') as a:
-      inventoryreset = json.load(a)
-    difficultyinput = input("-----------------------------------------\nSelect a difficulty(1, 2, 3)\n-----------------------------------------\n >#>")
+
+    difficultyinput = input("-----------------------------------------\nSelect a difficulty(1, 2, 3)\n-----------------------------------------\n >#> ")
     if difficultyinput == "1":
-      inventoryreset["otherdata"]["difficulty"] = 1
+      inventorydiffset["otherdata"]["difficulty"] = 1
       break
     elif difficultyinput == "2":
-      inventoryreset["otherdata"]["difficulty"] = 2
+      inventorydiffset["otherdata"]["difficulty"] = 2
       break
     elif difficultyinput == "3":
-      inventoryreset["otherdata"]["difficulty"] = 3
+      inventorydiffset["otherdata"]["difficulty"] = 3
       break
     else:
       print("Please Input a valid difficulty!")
-    with open(jsonInventory, 'w') as f:
-      json.dump(inventoryreset, f, indent=2)
+      
+  with open(jsonInventory, 'w') as f:
+    json.dump(inventorydiffset, f, indent=2)
+
   allcalc = cal()
   allposs = allcalc['allposs']
   allvars = allcalc['allvar']
@@ -109,47 +114,66 @@ def startGame():
   allpossf = f"{allposs:,}"
   allvarsf = f"{allvars:,}"
   alllinesf = f"{alllines:,}"
-
+  print(dialog["clear"])
   print(dialog["start"].format(allpossf, allvarsf, alllinesf, inventoryreset["otherdata"]["difficulty"], allperc, allpossf, allvarsf, alllinesf))
   input('\nPress Enter to start...')
   global Start
   Start = time.time()
+  print(dialog["clear"])
   print(dialog["dialog1.0"])
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.1"])
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.2"])
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.3"].format(mainCharacter))
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.4"])
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.5"].format(mainCharacter, mainCharacter))
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.6"].format(sideCharacter))
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.7"].format(mainCharacter))
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.8"].format(sideCharacter, scene))
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.9"].format(mainCharacter, scene))
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.10"].format(sideCharacter))
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.11"].format(mainCharacter))
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.12"].format(sideCharacter))
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.13"].format(mainCharacter))
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.14"])
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.15"].format(sideCharacter))
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.16"].format(sideCharacter))
   input()
+  print(dialog["clear"])
   print(dialog["dialog1.17"].format(sideCharacter))
   input()
+  print(dialog["clear"])
   corridor()
 
 def corridor():
@@ -183,6 +207,7 @@ def corridor():
       while True:
         with open(jsonInventory, 'r') as e:
           inventoryshow = json.load(e)
+        print(dialog["clear"])
         userinput01 = input("\nEnter passcode\n>#> ")
         if not userinput01.isnumeric():
           print(random.choice(["\nThis keypad only has numbers, not letters.", "\nHuh? I dont see a letter here", "\nMaybe its a number there are no numbers here"]))
@@ -203,10 +228,12 @@ def corridor():
     elif userInput.lower() == "inventory":
         with open(jsonInventory, 'r') as e:
           inventoryshow = json.load(e)
+        print(dialog["clear"])
         print("\n-----------------------------------------\n")
         for x in inventoryshow["items"]:
             print(x)
         print("\n-----------------------------------------\n")
+        time.sleep(3)
     else:
       print(f'{dialog["spacer"]}Invalid command try "help".{dialog["spacer"]}')
   
@@ -219,6 +246,7 @@ def Corridor():
 
 #---RoomA
 def roomA():
+  print(dialog["clear"])
   with open(jsonInventory, 'r') as a:
     inventoryreset = json.load(a)
   difficulty = inventoryreset["otherdata"]["difficulty"]
@@ -226,6 +254,7 @@ def roomA():
 
 #---RoomB
 def roomB():
+  print(dialog["clear"])
   with open(jsonInventory, 'r') as a:
     inventoryreset = json.load(a)
   difficulty = inventoryreset["otherdata"]["difficulty"]
@@ -233,6 +262,7 @@ def roomB():
 
 #---RoomC
 def roomC():
+  print(dialog["clear"])
   with open(jsonInventory, 'r') as a:
     inventoryreset = json.load(a)
   difficulty = inventoryreset["otherdata"]["difficulty"]
@@ -240,6 +270,7 @@ def roomC():
 
 #---RoomD
 def roomD():
+  print(dialog["clear"])
   with open(jsonInventory, 'r') as a:
     inventoryreset = json.load(a)
   difficulty = inventoryreset["otherdata"]["difficulty"]
@@ -248,6 +279,7 @@ def roomD():
 
 #---RoomE
 def roomE():
+  print(dialog["clear"])
   with open(jsonInventory, 'r') as a:
     inventoryreset = json.load(a)
   difficulty = inventoryreset["otherdata"]["difficulty"]

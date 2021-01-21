@@ -1,27 +1,30 @@
-table = """
-  9   6   8   0   5   2   4   1   3   7
-  8   2   7   3   9   1   5   6   4   0
-_________________HOWTO___________________
-Input  >  0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
-Output >  1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
-_________________________________________
-| . | @ | % | ) | ! | - | = | ^ | * | ; |
-| B | H | L | E | R | U | M | D | Q | F |
-_________________________________________
-| f | c | t | n | q | h | l | x | e | u |
-| Ω | Φ | π | γ | Ψ | ω | Ξ | λ | ζ | μ |
-_________________________________________
-| γ | μ | Φ | Ω | Ψ | Ξ | π | ζ | λ | ω |
-| ! | ; | * | % | . | ^ | ) | - | = | @ |
-_________________________________________
-| 8 | 2 | 7 | 3 | 9 | 1 | 5 | 6 | 4 | 0 |
-| n | x | t | c | u | l | q | e | h | f |
-_________________FINISH__________________
-| H | B | E | D | R | F | M | U | L | Q |
-| 3 | 4 | 8 | 2 | 9 | 5 | 6 | 1 | 7 | 0 |
-"""
 
+decrypt = ""
+decodelist = []
 
-# dif 1 = 5
-# dif 2 = 8
-# dif 3 = 13
+inventoryitem5 = "9 5 7 5 7"
+
+for x in inventoryitem5.split(" "):
+  if x == "0":
+    decodelist.append("7")
+  if x == "1":
+    decodelist.append("2")
+  if x == "2":
+    decodelist.append("6")
+  if x == "3":
+    decodelist.append("0")
+  if x == "4":
+    decodelist.append("3")
+  if x == "5":
+    decodelist.append("4")
+  if x == "6":
+    decodelist.append("1")
+  if x == "7":
+    decodelist.append("8")
+  if x == "8":
+    decodelist.append("9")
+  if x == "9":
+    decodelist.append("5")
+    
+
+print("".join(decodelist))

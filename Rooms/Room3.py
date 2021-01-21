@@ -67,7 +67,7 @@ def Room3Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
     if specialRoom == roomName1:
       specialRoom = True
     UserInput = input(str(commandLine.format(
-        roomName1)))  #The input is put in the varaible UserInput
+        roomName3)))  #The input is put in the varaible UserInput
 
     if UserInput.lower() == "help":
         print("\n-----------------------------------------\n")

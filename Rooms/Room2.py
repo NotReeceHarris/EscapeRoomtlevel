@@ -85,7 +85,7 @@ def Room2Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
     if specialRoom == roomName1:
       specialRoom = True
     UserInput = input(str(commandLine.format(
-        roomName1)))  #The input is put in the varaible UserInput
+        roomName2)))  #The input is put in the varaible UserInput
 
     if UserInput.lower() == "help":
       with open(jsonInventory, 'r') as e:

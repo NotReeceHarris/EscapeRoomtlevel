@@ -1,5 +1,6 @@
 {
   "spacer": "\n-----------------------------------------\n",
+  "clear": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
   "commandError": "\n-----------------------------------------\nSorry that isnt a valid command try 'help' to get a list of commands\n-----------------------------------------\n",
   "debug": "-------Debugging Panel-------\n\nMain Character       : {}\nSide Character       : {}\nAntagonist Character : {}\n\nScene: {}\n\nRoom1: {}\nRoom2: {}\nRoom3: {}\nRoom4: {}\nRoom5: {}\n\nInventory Space : {}\nSpecial Item    : {}\nSpecial Room    : {}\nEscapeRoom      : {}\n\n-----------------------------\n",
   "start": "-----------------------------------------\nWelcome to Kyle's, Deven's, Elijah's\nand Reece's Escape Room project:\n\nWithin the interative escape room there\nare {} possible combinations of\nrooms, names, scenes and items, {}\ndiffrent options and {} lines of code, so you\nwill never have the same experience once!\n\nYou are going to have a different\nexperience as you selected difficulty {}\nthis mean That the AI, puzzles and timers\nwill be changed due to the difficulty\nyou have chosen (you had {}% to get this run)\n\n*small easter egg the {}, {} and\n{}automatically change when we add stuff*\n-----------------------------------------",
@@ -22,7 +23,7 @@
   "dialog1.16": "\nYou and {} sprint away while trying not to look back!\n-----------------------------------------",
   "dialog1.17": "\nYour cornered, {} starts to boot the door down!\n-----------------------------------------",
   "dialog1.18": "\n\n-----------------------------------------",
-  "escapewin": "You escape the {} that has imprisoned you.\n Your fellow companion {} died at the hands of {}.\n You look down at your watch and you realise it is\n{}, You was trying to escape for {}.",
+  "escapewin": "\nYou escape the {} that has imprisoned you.\nYour fellow companion {} died at the hands of {}.\nYou look down at your watch and you realise it is\n{}, You was trying to escape for {}.",
 
   "CastleOuter": [
     "As you exit the room you notice how silent and cold the castle corridors are",

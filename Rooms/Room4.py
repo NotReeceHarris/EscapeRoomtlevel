@@ -78,7 +78,7 @@ def Room4Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
     if specialRoom == roomName4:
       specialRoom = True
     UserInput = input(str(commandLine.format(
-        roomName1)))  #The input is put in the varaible UserInput
+        roomName4)))  #The input is put in the varaible UserInput
 
     if UserInput.lower() == "help":
         print("\n-----------------------------------------\n")
@@ -230,27 +230,27 @@ def Room4Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         inventoryitem5["items"].remove("Decrypt table part 1")
         inventoryitem5["otherdata"]["table"].append("Decrypt table part 1")
         print(random.choice(["You put the peice on the table, Lets hope it matches the others", "You place the peice on the table, Lets hope it matches the others", "Il put this peice on the table maybe the others are in the next room"]))
-      elif "Decrypt table part 2" in inventoryitem5["items"]:
+      if "Decrypt table part 2" in inventoryitem5["items"]:
         inventoryitem5["items"].remove("Decrypt table part 2")
         inventoryitem5["otherdata"]["table"].append("Decrypt table part 2")
         print(random.choice(["You put the peice on the table, Lets hope it matches the others", "You place the peice on the table, Lets hope it matches the others", "Il put this peice on the table maybe the others are in the next room"]))
-      elif "Decrypt table part 3" in inventoryitem5["items"]:
+      if "Decrypt table part 3" in inventoryitem5["items"]:
         inventoryitem5["items"].remove("Decrypt table part 3")
         inventoryitem5["otherdata"]["table"].append("Decrypt table part 3")
         print(random.choice(["You put the peice on the table, Lets hope it matches the others", "You place the peice on the table, Lets hope it matches the others", "Il put this peice on the table maybe the others are in the next room"]))
-      elif "Decrypt table part 4" in inventoryitem5["items"]:
+      if "Decrypt table part 4" in inventoryitem5["items"]:
         inventoryitem5["items"].remove("Decrypt table part 4")
         inventoryitem5["otherdata"]["table"].append("Decrypt table part 4")
         print(random.choice(["You put the peice on the table, Lets hope it matches the others", "You place the peice on the table, Lets hope it matches the others", "Il put this peice on the table maybe the others are in the next room"]))
-      elif "Decrypt table part 5" in inventoryitem5["items"]:
+      if "Decrypt table part 5" in inventoryitem5["items"]:
         inventoryitem5["items"].remove("Decrypt table part 5")
         inventoryitem5["otherdata"]["table"].append("Decrypt table part 5")
         print(random.choice(["You put the peice on the table, Lets hope it matches the others", "You place the peice on the table, Lets hope it matches the others", "Il put this peice on the table maybe the others are in the next room"]))
-      elif "Decrypt table part 6" in inventoryitem5["items"]:
+      if "Decrypt table part 6" in inventoryitem5["items"]:
         inventoryitem5["items"].remove("Decrypt table part 6")
         inventoryitem5["otherdata"]["table"].append("Decrypt table part 6")
         print(random.choice(["You put the peice on the table, Lets hope it matches the others", "You place the peice on the table, Lets hope it matches the others", "Il put this peice on the table maybe the others are in the next room"]))
-      if "Decrypt table part 1" in inventoryitem5["otherdata"]["table"] and "Decrypt table part 2" in inventoryitem5["items"] and "Decrypt table part 3" in inventoryitem5["items"] and "Decrypt table part 4" in inventoryitem5["items"] and "Decrypt table part 5" in inventoryitem5["items"] and "Decrypt table part 6" in inventoryitem5["items"]:
+      if "Decrypt table part 1" in inventoryitem5["otherdata"]["table"] and "Decrypt table part 2" in inventoryitem5["otherdata"]["table"] and "Decrypt table part 3" in inventoryitem5["otherdata"]["table"] and "Decrypt table part 4" in inventoryitem5["otherdata"]["table"] and "Decrypt table part 5" in inventoryitem5["otherdata"]["table"] and "Decrypt table part 6" in inventoryitem5["otherdata"]["table"]:
         print(random.choice(["So with all the peices together it reads out this", "well i wasnt expecing all the peices to be this", "all the peices together make this table? huh"]))
         table = """
         _________________HOWTO___________________
@@ -274,7 +274,7 @@ def Room4Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         """
         print(table)
         input("Press enter to leave table...")
-        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+        print(dialog["clear"])
       else:
         print(random.choice(["\nI still need some parts to see the decryption table they might be in the next room\n", "\nmaybe the other peices are in the next room\n", "\nMaybe i should get some more\n", "\nThere are some peices missing maybe i should get somemore\n", "\nI should get some more peices to be able to read this graph\n"]))
 
