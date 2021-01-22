@@ -383,6 +383,7 @@ def Room5Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
             print(x)
         print("\n-----------------------------------------\n")
     elif UserInput.lower() == "exit":
+        print(dialog["clear"])
         return
     elif UserInput.lower() == "lockeddoor":
       if escapeDoorLocation == "room5":

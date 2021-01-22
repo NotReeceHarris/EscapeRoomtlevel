@@ -184,6 +184,7 @@ def corridor():
       print(random.choice(["OMG! is is that {} are they dead omg\n* You start running to the exit*\nif i dont get out now im next", "IS IS that {} *You nearly faint*\nthere arm is on the other side of the rooms,\nif i dont get our now im nexrt"]).format(sideCharacter))
     userInput = input(str(commandLine.format('Outer Rooms')))
     if userInput.lower() == "help":
+      print(dialog["clear"])
       print(dialog["spacer"])
       print(f"room1        ->  {roomName1}\nroom2        ->  {roomName2}\nroom3        ->  {roomName3}\nroom4        ->  {roomName4}\nroom5        ->  {roomName5}\n\n    --------------------------\n\nhelp         ->  Help Menu\ninventory    -> Show inventory")
       print(dialog["spacer"])
@@ -233,8 +234,8 @@ def corridor():
         for x in inventoryshow["items"]:
             print(x)
         print("\n-----------------------------------------\n")
-        time.sleep(3)
     else:
+      print(dialog["clear"])
       print(f'{dialog["spacer"]}Invalid command try "help".{dialog["spacer"]}')
   
 
@@ -250,6 +251,7 @@ def roomA():
   with open(jsonInventory, 'r') as a:
     inventoryreset = json.load(a)
   difficulty = inventoryreset["otherdata"]["difficulty"]
+
   Room1.Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomName1, roomName2, roomName3, roomName4, roomName5, specialRoom, inventorySpace, specialItem, commandLine, difficulty, escapeDoorLocation) #all the data that the room will need is parsed in
 
 #---RoomB

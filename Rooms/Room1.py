@@ -86,7 +86,7 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         )
         print("\n-----------------------------------------\n")
     elif UserInput.lower() == "item1":
-
+      print(dialog["clear"])
       with open(jsonInventory, 'r') as e:
         inventoryitem1 = json.load(e)
 
@@ -117,7 +117,7 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         json.dump(inventoryitem1, f, indent=2)
 
     elif UserInput.lower() == "item2":
-
+      print(dialog["clear"])
       #currentItems[1]
       with open(jsonInventory, 'r') as e:
         inventoryitem2 = json.load(e)
@@ -149,6 +149,7 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         json.dump(inventoryitem2, f, indent=2)
 
     elif UserInput.lower() == "item3":
+      print(dialog["clear"])
       #currentItems[2]
       
       with open(jsonInventory, 'r') as e:
@@ -181,6 +182,7 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         json.dump(inventoryitem3, f, indent=2)
 
     elif UserInput.lower() == "item4":
+      print(dialog["clear"])
       #currentItems[3]
       
       with open(jsonInventory, 'r') as e:
@@ -213,7 +215,7 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
         json.dump(inventoryitem4, f, indent=2)
 
     elif UserInput.lower() == "storageunit":
-
+      print(dialog["clear"])
       with open(jsonInventory, 'r') as e:
         inventoryitem5 = json.load(e)
 
@@ -227,7 +229,7 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
           print(random.choice(["\nI have already opend this box, its just a waste of time", "\nHavent i already opend this box? if so it would be a waste of time to open again.", "\nI have already taken stuff from here it would be pointless to look at it again."]))
         else:
           if "room1paper" in inventoryitem5["unlocks"] and "Key (Room 2)" not in inventoryitem5["items"]:
-            print(random.choice(["\nYou use the code {}, it opens there is a key that says \"Room 2\" on it and a weird looking torch", "\nYou enter the code {}, it unlocks! theres a key that says \"Room 2\" on it and a wierd looking torch"]).format(cabnetcode))
+            print(random.choice(["\nYou use the code {}, it opens there is a key that says\n\"Room 2\" on it and a weird looking torch", "\nYou enter the code {}, it unlocks! theres a key that says\n\"Room 2\" on it and a wierd looking torch"]).format(cabnetcode))
             inventoryitem5["items"].append("Black Light")
             inventoryitem5["items"].append("Key (Room 2)")
             inventoryitem5["unlocks"].append("room1lockbox")
@@ -246,11 +248,13 @@ def Room1Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
     elif UserInput.lower() == "inventory":
       with open(jsonInventory, 'r') as e:
         inventoryshow = json.load(e)
+        print(dialog["clear"])
         print("\n-----------------------------------------\n")
         for x in inventoryshow["items"]:
             print(x)
         print("\n-----------------------------------------\n")
     elif UserInput.lower() == "exit":
+        print(dialog["clear"])
         return
     elif UserInput.lower() == "lockeddoor":
       if escapeDoorLocation == "room1":

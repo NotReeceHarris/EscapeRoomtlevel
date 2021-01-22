@@ -2,74 +2,35 @@
   "items": [
     "Key (Room 1)",
     "Key (Room1 LockBox)",
-    "Paper (5821)",
+    "Paper (9959)",
     "Black Light",
-    "Key (Room 2)",
-    "Key (Room 3)",
-    "Key (Exit)",
-    "Hive Tyrant Molt"
+    "Key (Room 2)"
   ],
   "unlocks": [
     "item1room1",
     "item2room1",
     "item3room1",
-    "item4room1",
     "room1paper",
-    "room1lockbox",
-    "item1room2",
-    "item2room2",
-    "trapdoor",
-    "keypad",
-    "item1room3",
-    "item2room3",
-    "room3paper",
-    "item3room3",
-    "item4room3",
-    "keyroom5",
-    "item1room4",
-    "item2room4",
-    "item3room4",
-    "room4paper",
-    "item4room4",
-    "item1room5",
-    "room5paper",
-    "item2room5",
-    "item3room5",
-    "item4room5",
-    "vault",
-    "vault",
-    "vaultopen",
-    "sidedeath"
+    "item4room1",
+    "room1lockbox"
   ],
   "locations": {
-    "keylocation": "item4room3",
-    "otherlocation": "item3room3"
+    "keylocation": "item2room1",
+    "otherlocation": "item3room1"
   },
   "code": {
-    "room1cabnet": 5821,
-    "room2cabnet": "8683",
-    "room3cabnet": "6 5 3 6 8",
-    "room4cabnet": "65368",
-    "dif1num": "1 8 1 2 2",
-    "dif2num": "4 8 2 3 2 3 3 4",
-    "dif3num": "1 1 8 8 9 6 5 2 1 4 4 0 4"
+    "room1cabnet": 9959,
+    "room2cabnet": 1546,
+    "room3cabnet": "2 9 2 6 1",
+    "room4cabnet": "29261",
+    "dif1num": "2 3 3 3 0",
+    "dif2num": "2 4 0 2 4 7 5 0",
+    "dif3num": "8 2 3 8 5 8 1 4 1 9 0 3 8"
   },
-  "timestart": 1611272710,
+  "timestart": 1611273802,
   "otherdata": {
-    "room2": [
-      3,
-      8,
-      6,
-      8
-    ],
-    "table": [
-      "Decrypt table part 1",
-      "Decrypt table part 2",
-      "Decrypt table part 4",
-      "Decrypt table part 3",
-      "Decrypt table part 5",
-      "Decrypt table part 6"
-    ],
+    "room2": [],
+    "table": [],
     "difficulty": 1
   },
   "randomItems": []

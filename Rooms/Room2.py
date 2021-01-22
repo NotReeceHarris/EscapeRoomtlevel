@@ -245,6 +245,7 @@ def Room2Start(mainCharacter, sideCharacter, antagonistCharacter, scene, roomNam
             print(x)
         print("\n-----------------------------------------\n")
     elif UserInput.lower() == "exit":
+        print(dialog["clear"])
         return
     elif UserInput.lower() == "craftkey":
       with open(jsonInventory, 'r') as e:
