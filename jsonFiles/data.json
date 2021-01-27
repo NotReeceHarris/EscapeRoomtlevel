@@ -1,12 +1,4 @@
 {
   "inventorySpace": 5,
-  "Debug": true,
-  "puzzles": [
-    "codeLock",
-    "sudoku",
-    "morseCode"
-  ],
-  "inventory": [
-    "key1"
-  ]
+  "Debug": true
 }

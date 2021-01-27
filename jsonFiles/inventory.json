@@ -1,26 +1,82 @@
 {
   "items": [
-    "Key (Room 1)"
+    "Key (Room 1)",
+    "Key (Room1 LockBox)",
+    "Paper (8101)",
+    "Black Light",
+    "Key (Room 2)",
+    "Key Half 2 (Room 3)",
+    "Key (Room 3)",
+    "Decrypt table part 1",
+    "Decrypt table part 2",
+    "Key (Exit)",
+    "Alien Sample"
   ],
-  "unlocks": [],
+  "unlocks": [
+    "item1room1",
+    "item2room1",
+    "item3room1",
+    "room1paper",
+    "room1lockbox",
+    "item1room2",
+    "item2room2",
+    "trapdoor",
+    "keypad",
+    "item1room3",
+    "item2room3",
+    "item3room3",
+    "room3paper",
+    "item4room3",
+    "keyroom5",
+    "item1room4",
+    "item2room4",
+    "item3room4",
+    "room4paper",
+    "item4room4",
+    "item1room5",
+    "item2room5",
+    "item3room5",
+    "item4room5",
+    "room5paper",
+    "vault",
+    "vault",
+    "vaultopen",
+    "sidedeath"
+  ],
   "locations": {
-    "keylocation": "",
-    "otherlocation": ""
+    "keylocation": "item1room2",
+    "otherlocation": "item4room2"
   },
   "code": {
-    "room1cabnet": 6177,
-    "room2cabnet": 3915,
-    "room3cabnet": "1 6 2 7 5",
-    "room4cabnet": "16275",
-    "dif1num": "2 6 7 5 8",
-    "dif2num": "0 8 7 3 2 4 3 5",
-    "dif3num": "5 0 3 3 9 6 4 5 8 0 0 3 9"
+    "room1cabnet": 8101,
+    "room2cabnet": "9809",
+    "room3cabnet": "4 8 9 4 9",
+    "room4cabnet": "48949",
+    "dif1num": "3 1 9 4 2",
+    "dif2num": "3 6 6 6 9 2 1 6",
+    "dif3num": "3 5 3 9 5 8 5 9 1 3 7 8 1"
   },
-  "timestart": 1611279040,
+  "timestart": 1611746883,
   "otherdata": {
-    "room2": [],
-    "table": [],
-    "difficulty": 0
+    "room2": [
+      9,
+      9,
+      8,
+      0
+    ],
+    "table": [
+      "Decrypt table part 1",
+      "Decrypt table part 2",
+      "Decrypt table part 3",
+      "Decrypt table part 4",
+      "Decrypt table part 1",
+      "Decrypt table part 2",
+      "Decrypt table part 5",
+      "Decrypt table part 6",
+      "Decrypt table part 1",
+      "Decrypt table part 2"
+    ],
+    "difficulty": 2
   },
   "randomItems": []
 }

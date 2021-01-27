@@ -167,7 +167,7 @@ def startGame():
     print(dialog["dialog1.7"].format(mainCharacter))
     input()
     print(dialog["clear"])
-    print(dialog["dialog1.8"].format(sideCharacter, scene))
+    print(dialog["dialog1.8"].format(sideCharacter, scene)) 
     input()
     print(dialog["clear"])
     print(dialog["dialog1.9"].format(mainCharacter, scene))
