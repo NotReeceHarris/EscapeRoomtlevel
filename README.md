@@ -1,16 +1,13 @@
 
 <p align=center>
 
-  <img src="https://i.imgur.com/ZBxd4zf.png" alt="CryptoniteData v2.0.0" />
+  <img src="https://i.imgur.com/LCmNNMI.png" alt="Escape ROOM" />
 
   <br>
   <br>
-  <span>Easy to use keychain for api keys <br>
- Intergration to any project is simple as the data-bases supported are, <br>
- Json, Mysql, Sqlialchemy, Spreadsheets.<br></span>
+  <span>Terminal based random escape room game <br></span>
   <br>
   <a target="_blank" href="https://www.python.org/downloads/" title="Python version"><img src="https://img.shields.io/badge/python-%3E=_3.8-green.svg"></a>
-  <a target="_blank" href="LICENSE" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
 </p>
 
 <p align="center">
@@ -21,15 +18,17 @@
   <a href="#Features">Features</a>
 </p>
 
+[![Run on Repl.it](https://user-images.githubusercontent.com/27065646/92304596-bf719b00-ef7f-11ea-987f-2c1f3c323088.png)](https://repl.it/github/sherlock-project/sherlock)
+
 ## Update
 ```console
 This project is being developed
 ```
 
 ## Features
-* <strong>SQLAlchemy</strong>
-* <strong>Json</strong>
-* <strong>Spreadsheets</strong>
+* <strong>Randomization</strong>
+* <strong>Puzzles</strong>
+* <strong>Game saving features</strong>
 
 
 ## How and why
@@ -37,7 +36,10 @@ This project is being developed
 <span>A simple to use and intergrate api-key-chain that supports sqlalchemy, mysql, json, spreadsheets and more</span>
 
 ## Contributors
-* [ZenoEchozZ](https://github.com/NotReeceHarris) 
+* [Reece Harris](https://github.com/NotReeceHarris) 
+* [Deven Briers](https://www.linkedin.com/in/deven-briers-5b62541bb/)
+* [Elijah McVey](https://www.linkedin.com/in/elijah-mcvey-97a5b81bb/)
+* [Kyle Willets](https://www.linkedin.com/in/kyle-willets-2315b81bb/)
 
 ## License
 
