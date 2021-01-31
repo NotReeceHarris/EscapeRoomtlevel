@@ -13,11 +13,12 @@
 <p align="center">
   <a href="#Contributors">Contributors</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#Update">Update</a>
+  <a href="#Run">Run</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#Features">Features</a>
 </p>
 
+## Run
 [![Run on Repl.it](https://user-images.githubusercontent.com/27065646/92304596-bf719b00-ef7f-11ea-987f-2c1f3c323088.png)](https://repl.it/github/NotReeceHarris/EscapeRoomtlevel)
 
 ## Update
@@ -32,8 +33,8 @@ This project is being developed
 
 
 ## How and why
-<span>Most apis need a key, and just like real life keys should be on a chain so why not put your api keys on a chain?</span>
-<span>A simple to use and intergrate api-key-chain that supports sqlalchemy, mysql, json, spreadsheets and more</span>
+<span>With all education your set to make projects well this is our project just overcomplicated with 1mil+ possible runs</span>
+<span>This project heavily depends on randomness its a simple script for python but a over engineered script for an escaperoom</span>
 
 ## Contributors
 * [Reece Harris](https://github.com/NotReeceHarris) 
@@ -41,7 +42,4 @@ This project is being developed
 * [Elijah McVey](https://www.linkedin.com/in/elijah-mcvey-97a5b81bb/)
 * [Kyle Willets](https://www.linkedin.com/in/kyle-willets-2315b81bb/)
 
-## License
 
-MIT © CryptoniteData<br/>
-Original Creator - [Reece Harris](https://github.com/NotReeceHarris)
