@@ -1,7 +1,7 @@
 
 <p align=center>
 
-  <img src="https://i.imgur.com/LCmNNMI.png" alt="Escape ROOM" />
+  <img src="https://i.imgur.com/pZQRQ9k.png" alt="Escape ROOM" />
 
   <br>
   <br>
