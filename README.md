@@ -26,8 +26,18 @@
 // Within the "jsonFiles/BaseData.json" there are blocks of characters and items, all are editable
 // Customize it to your liking make the game personal to you
 
-"sideCharacterNames": []
+{
+"Themes": "Mystery",
+"Scene": [],
+"antagonistNames": [],
+"sideCharacterNames": [],
+"mainCharacterNames": [],
 
+"Space StationSpecialItem": [],
+"Abandoned HospitalSpecialItem": [],
+"PrisonSpecialItem": [],
+"CastleSpecialItem": []
+}
 ```
 
 ## Features
