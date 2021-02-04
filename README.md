@@ -84,7 +84,7 @@ EscapeRoom      : [Runs EscapeDoor location]
 <span>This project heavily depends on randomness its a simple script for python but a over engineered script for an escaperoom</span>
 
 ## Contributors
-* [Reece Harris](https://github.com/NotReeceHarris) 
+* [Reece Harris](https://www.linkedin.com/in/reece-harris-3215b91bb/) 
 * [Deven Briers](https://www.linkedin.com/in/deven-briers-5b62541bb/)
 * [Elijah McVey](https://www.linkedin.com/in/elijah-mcvey-97a5b81bb/)
 * [Kyle Willets](https://www.linkedin.com/in/kyle-willets-2315b81bb/)
