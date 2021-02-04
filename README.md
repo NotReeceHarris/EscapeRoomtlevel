@@ -21,6 +21,39 @@
 ## Run
 [![Run on Repl.it](https://user-images.githubusercontent.com/27065646/92304596-bf719b00-ef7f-11ea-987f-2c1f3c323088.png)](https://repl.it/github/NotReeceHarris/EscapeRoomtlevel)
 
+## Debugging options
+```json
+// Within "jsonFiles/data.json" there is a atribute names "Debug" change this to "true"
+
+{
+  "inventorySpace": 5,
+  "Debug": false
+}
+```
+This just displays that data is that run as it will be diffrent every run
+```console
+-------Debugging Panel-------
+
+Main Character       : [Runs Main character]
+Side Character       : [Runs Side character]
+Antagonist Character : [Runs Antagonist character]
+
+Scene: [Runs Scene]
+
+Room1: [Runs Room1]
+Room2: [Runs Room2]
+Room3: [Runs Room3]
+Room4: [Runs Room4]
+Room5: [Runs Room5]
+
+Inventory Space : [Games set inventory size]
+Special Item    : [Runs Special item]
+Special Room    : [Runs Special room]
+EscapeRoom      : [Runs EscapeDoor location]
+
+-----------------------------
+```
+
 ## Edit characters
 ```json
 // Within the "jsonFiles/BaseData.json" there are blocks of characters and items, all are editable
